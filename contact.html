@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們 - 永環材料 (SusMaterial)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo"><strong>Sus</strong>Material</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="technology.html">我們的技術</a></li>
+                    <li><a href="services.html">服務項目</a></li>
+                    <li><a href="market.html">市場與應用</a></li>
+                    <li><a href="contact.html" class="active">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">與我們聯繫</h1>
+                <p class="page-subtitle">感謝您對永環材料的關注。無論您是想了解我們的技術、尋求廢料回收服務，或是探討任何合作的可能性，我們都竭誠歡迎您留下訊息。</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container reveal">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>公司資訊</h3>
+                        <p><strong>公司名稱：</strong><br>永環材料股份有限公司 (SusMaterial)</p>
+                        <!-- <p><strong>電話：</strong><br><a href="tel:"> </a></p> -->
+                        <p><strong>電子郵件：</strong><br><a href="mailto:info@susmaterial.com">info@susmaterial.com</a></p>
+                        <p><strong>地址：</strong><br>310401新竹縣竹東鎮中興路四段195號52館526室</p>
+                        
+                        <div class="map-container">
+                             <p style="padding: 2rem; text-align: center;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.6214703471446!2d121.04298217393165!3d24.774164448707914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346837daafec8cf5%3A0x65d8d4def2d4ca99!2z5bel56CU6ZmiNTLppKg!5e0!3m2!1sen!2stw!4v1753025527531!5m2!1sen!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                        </div>
+                        </div>
+                    <div class="contact-form">
+                        <h3>線上諮詢表單</h3>
+                        <p style="color:var(--text-secondary); margin-bottom: 2rem;">請填寫以下表單，我們的專家團隊將在 1-2 個工作日內盡快與您聯繫。</p>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezeEbLsRZ07hnGW4J0bH8TXHt20SnYXJY_5I69_8pW52dEfQ/viewform?embedded=true" width="640" height="1211" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-contact-info">
+                    <h3>永環材料股份有限公司 (SusMaterial)</h3>
+                    <p>地址: 310401新竹縣竹東鎮中興路四段195號52館526室</p>
+                    <!-- <p>電話: </p> -->
+                    <p>Email: info@susmaterial.com</p>
+                </div>
+                <div class="footer-links">
+                    <h3>網站地圖</h3>
+                    <ul>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="technology.html">我們的技術</a></li>
+                        <li><a href="services.html">服務項目</a></li>
+                        <li><a href="market.html">市場與應用</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SusMaterial Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>

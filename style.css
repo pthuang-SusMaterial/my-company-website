@@ -511,6 +511,9 @@ blockquote {
     .footer-content, .contact-grid, .team-grid, .philosophy-grid, .features-grid {
         grid-template-columns: 1fr;
     }
+    .comparison-grid {
+    grid-template-columns: 1fr;
+    }
     .hero-title, .page-title {
         font-size: 2.5rem;
     }

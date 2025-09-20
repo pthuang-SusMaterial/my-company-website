@@ -9,7 +9,14 @@
 <body>
     <header class="main-header">
         <div class="container">
-            <a href="index.html" class="logo"><strong>Sus</strong>Material</a>
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;">
+            </a>
+
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">首頁</a></li>
@@ -120,7 +127,7 @@
                     <h3>永環材料股份有限公司 (SusMaterial)</h3>
                     <p>地址: 310401新竹縣竹東鎮中興路四段195號52館526室</p>
                     <!-- <p>電話:</p> -->
-                    <p>Email: info@susmaterial.com</p>
+                    <p>Email: <a href="mailto:info@susmaterial.com">info@susmaterial.com</a></p>
                 </div>
                 <div class="footer-links">
                     <h3>網站地圖</h3>
@@ -153,6 +160,14 @@
         }
         window.addEventListener("scroll", reveal);
         reveal();
+        // --- 新增的漢堡選單功能 ---
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        navToggle.addEventListener('click', () => {
+            // 切換 body 的 class，來觸發 CSS 中的 .nav-open 樣式
+            document.body.classList.toggle('nav-open');
+        });
     </script>
 </body>
 </html>

@@ -6,7 +6,11 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
+<url>
+  <loc>https://susmaterial.com/products</loc>
+  <lastmod>2026-01-26</lastmod>
+  <priority>0.90</priority>
+</url>
 <url>
   <loc>https://susmaterial.com/</loc>
   <lastmod>2025-09-20T03:38:09+00:00</lastmod>

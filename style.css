@@ -217,6 +217,35 @@ blockquote {
     border-bottom-color: var(--primary-accent);
 }
 
+/* --- [新增] 語言切換器 (Language Switcher) --- */
+.language-switcher {
+    margin-left: 1rem; /* 與導覽列保持一點距離 */
+    display: flex;
+    gap: 0.5rem;
+}
+.lang-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+.lang-btn:hover {
+    color: var(--white-color);
+    border-color: var(--text-secondary);
+}
+.lang-btn.active {
+    color: var(--primary-accent);
+    border-color: var(--primary-accent);
+    font-weight: bold;
+}
+/* --- 結束 [新增] --- */
+
+
 /* --- 頁尾 (Footer) --- */
 .main-footer {
     background-color: var(--bg-surface);
@@ -518,6 +547,13 @@ blockquote {
         font-size: 2.5rem;
     }
 
+    /* --- [修改] 手機版導覽列 --- */
+    .language-switcher {
+        display: none; /* 在漢堡選單模式下，先隱藏電腦版切換器 */
+    }
+    /* --- 結束 [修改] --- */
+
+
     /* --- Mobile Navigation: Hamburger Button --- */
     .nav-toggle {
         display: block;
@@ -608,4 +644,237 @@ blockquote {
     .nav-open body {
         overflow: hidden; /* 防止背景滾動 */
     }
+
+    /* --- [新增] 手機版語言切換器 (放在漢堡選單內部) --- */
+    /* 注意：您需要手動將 .language-switcher 的 HTML 
+       也複製一份到 .main-nav 內部 (ul 之後)，
+       這樣才能在手機版選單中顯示。
+       如果不想複製HTML，目前的CSS會隱藏它。
+       
+       以下的CSS假設您 *已經* 複製了一份 switcher 到 .main-nav 裡。
+    */
+    .main-nav .language-switcher {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        opacity: 0; /* 配合選單淡入 */
+        transform: translateY(1rem);
+        transition: opacity 250ms linear, transform 250ms ease-in-out;
+    }
+    .nav-open .main-nav .language-switcher {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 200ms;
+    }
+    /* --- 結束 [新增] --- */
+
+
+/* ==========================================================================
+   5. 人才招募頁面樣式 (Careers Page)
+   ========================================================================== */
+
+/* --- 核心價值 UI (優化版) --- */
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 網格 */
+    gap: 3rem 2rem; /* 上下 3rem, 左右 2rem */
+    margin-top: 4rem;
+}
+
+.value-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem; /* 留出空間給裝飾線條 */
+}
+
+/* 關鍵的綠色裝飾線條 */
+.value-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px; /* 對齊圖示頂部 */
+    width: 4px;
+    height: 50px; /* 線條高度 */
+    background-color: var(--primary-accent);
+    border-radius: 2px;
+}
+
+.value-icon img {
+    width: 40px; /* 圖示大小 */
+    height: 40px;
+    margin-top: 5px; /* 讓圖示和文字對齊更精確 */
+}
+
+.value-content h3 {
+    font-size: 1.5rem;
+    color: var(--white-color);
+    margin-bottom: 0.5rem;
+}
+
+.value-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* --- 職缺列表 (careers.html) --- */
+.job-list-container {
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
+}
+.job-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.job-card:hover {
+    border-color: var(--primary-accent);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.job-card-header {
+    flex-basis: 40%;
+}
+.job-card-header h3 {
+    font-size: 1.5rem;
+    color: var(--white-color);
+    margin-bottom: 0.25rem;
+}
+.job-card-details {
+    flex-basis: 35%;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+.job-tag-fulltime, .job-tag-contract, .job-tag-intern {
+    font-size: 0.9rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.job-tag-fulltime { background-color: var(--primary-accent); color: #000; }
+.job-tag-contract { background-color: #ffc107; color: #000; }
+.job-tag-intern { background-color: #17a2b8; color: var(--white-color); }
+
+/* --- 職缺詳情頁 (job-detail.html) --- */
+.job-detail-tag {
+    background-color: var(--bg-surface);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+.job-detail-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+.job-detail-main h2 {
+    font-size: 2rem;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+.job-detail-main h3 {
+    color: var(--primary-accent);
+    font-size: 1.4rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--primary-accent);
+    padding-left: 0.5rem;
+}
+.job-detail-main ul {
+    list-style-position: inside;
+    padding-left: 0.5rem;
+}
+.job-detail-main ul li {
+    margin-bottom: 0.75rem;
+}
+.job-detail-sidebar .sidebar-widget {
+    background-color: var(--bg-surface);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 120px; /* 捲動時固定的位置 (需依您 header 高度微調) */
+}
+.job-detail-sidebar h4 {
+    color: var(--white-color);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+.job-detail-sidebar ul {
+    list-style: none;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+.job-detail-sidebar ul li {
+    margin-bottom: 0.5rem;
+}
+.job-detail-sidebar p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* --- 職缺頁 RWD --- */
+@media (max-width: 768px) {
+    .value-grid {
+        grid-template-columns: 1fr; /* 核心價值在手機上變為單欄 */
+        gap: 2.5rem;
+    }
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .job-detail-grid {
+        grid-template-columns: 1fr;
+    }
+    .job-detail-sidebar {
+        order: -1; /* 在手機上，將側邊欄移到最上方 */
+        position: static; /* 取消固定 */
+    }
+}
+/* [新增] 職缺頁獎金高亮樣式 */
+.bonus-highlight {
+    text-align: center;
+    color: var(--primary-accent);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: -1rem; /* 讓它離標題近一點 */
+}
+/* ==========================================================
+   [僅限 人才招募頁] 核心價值區塊優化
+   ========================================================== */
+
+/* * 透過 #careers-values 這個ID，
+ * 我們只會鎖定「人才招募頁」上的這個區塊，
+ * 絕對不會影響到其他頁面。
+ */
+#careers-values .feature-item {
+    text-align: center;       /* 1. 讓所有內容置中 */
+    border-left: none;        /* 2. 移除舊的左側邊框 */
+    border-top: 4px solid var(--primary-accent); /* 3. 改用頂部邊框 */
+
+    background-color: red !important;
+}
+
+/* (可選) 您也可以在這裡覆蓋網格佈局，
+   如果您想強制它在電腦上也顯示為 2x2 */
+#careers-values .features-grid {
+    /* 限定 .features-grid 最大寬度為 800px 
+       並置中，使其在超寬螢幕上也能保持 2x2
+    */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
 }

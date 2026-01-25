@@ -1,11 +1,12 @@
 {
     "navHome": "Home",
-    "navAbout": "About Us",
+    "navAbout": "About",
     "navTech": "Technology",
     "navServices": "Services",
     "navMarket": "Market",
     "navCareers": "Careers",
     "navContact": "Contact",
+    "navProducts": "Product",
 
     "footerSitemapTitle": "Sitemap",
     "footerContactAddress": "Address: Rm. 526, Bldg. 52, 195, Sec. 4, Chung Hsing Rd., Chutung, Hsinchu 310401, Taiwan",
@@ -73,6 +74,9 @@
     "prodWTitle": "Recycled Tungsten Powder (W Powder)",
     "prodWAbout": "High-purity tungsten powder recycled from scrap tungsten carbide using exclusive green technology, suitable for powder metallurgy and cemented carbide production.",
     "prodPurity": "Purity:",
+    "prodWPurity": "99.9% or higher",
+    "prodWO3Purity": "High purity grade",
+    "prodWO3App": "CVD, Alloy raw materials",
     "prodSize": "Avg. Particle Size:",
     "prodWO3Title": "Recycled Tungsten Trioxide (WO₃)",
     "prodWO3About": "High-quality recycled tungsten chemicals offering excellent chemical stability, ideal for ceramic chemicals and sputtering target raw materials.",

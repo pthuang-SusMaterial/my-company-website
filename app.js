@@ -11,22 +11,25 @@ document.addEventListener('DOMContentLoaded', () => {
             translatableElements.forEach(element => {
                 const key = element.getAttribute('data-i18n-key');
                 if (translations[key]) {
-                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    // 根據標籤類型更新內容
+                    if (element.tagName === 'META') {
+                        element.setAttribute('content', translations[key]);
+                    } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                         element.placeholder = translations[key];
+                    } else if (element.tagName === 'TITLE') {
+                        document.title = translations[key];
                     } else {
                         element.innerHTML = translations[key];
                     }
                 }
             });
             
-            // 同步更新按鈕狀態
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.getAttribute('data-lang') === language);
             });
 
-            // 更新網頁標題 (SEO 優化)
-            const titleKey = language === 'zh-TW' ? 'navHome' : 'navHome'; // 可根據頁面自訂
-            // document.title = translations['pageTitle'] || document.title; 
+            // 設定 HTML 語系標籤
+            document.documentElement.lang = language;
 
         } catch (error) {
             console.error('Translation Error:', error);
@@ -46,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 優先順序：1. 使用者上次選擇 2. 瀏覽器語言 3. 預設繁中
     const browserLang = navigator.language === 'en-US' ? 'en-US' : 'zh-TW';
     const initialLang = localStorage.getItem('language') || browserLang;
     translatePage(initialLang);

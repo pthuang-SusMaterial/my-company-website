@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>永環材料 (SusMaterial) - 創新綠色循環技術</title>
+    <title data-i18n-key="homePageTitleSEO">永環材料 SusMaterial | 創新綠色循環技術與低碳材料供應夥伴</title>
+    <meta name="description" data-i18n-key="homePageDescSEO" content="永環材料提供原創綠色再生技術，將廢金屬轉化為高價值資源。協助企業達成 ESG 願景與循環經濟目標。">
+    
+    <link rel="alternate" hreflang="zh-TW" href="https://susmaterial.com/index.html" />
+    <link rel="alternate" hreflang="en-US" href="https://susmaterial.com/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://susmaterial.com/index.html" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -56,7 +62,7 @@
         <section class="content-section">
             <div class="container reveal">
                 <h2 class="section-title" data-i18n-key="section1Title">源自臺灣的原創綠色科技</h2>
-                <p class="section-intro" data-i18n-key="section1Content">永環材料掌握了完全原創的綠色再生技術，從核心原理到製程細節，我們重新定義了金屬循環的標準。我們的目標不僅是處理廢棄物，更是要成為市場中領先的「低碳材料供應夥伴」。目前，我們已成功驗證將廢棄合金高效回收，並再生成為高純度的化學原物料，為您的供應鏈注入永續價值。</p>
+                <p class="section-intro" data-i18n-key="section1Content">永環材料掌握了完全原創的綠色再生技術，從核心原理到製程細節，我們重新定義了金屬循環的標準。我們的目標不僅是處理廢棄物，更是要成為市場中領先的「低碳材料供應夥伴」。目前，我們已成功驗證將廢棄合金高效回收，並再生成為純度達 99.9% 以上的<strong>高純度再生鎢粉 (W Powder)</strong> 與<strong>三氧化鎢 (WO₃)</strong>，為半導體與精密加工供應鏈注入永續價值。</p>
             </div>
         </section>
 
@@ -96,8 +102,9 @@
                     <h3 data-i18n-key="footerSitemapTitle">網站地圖</h3>
                     <ul>
                         <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
-                        <li><a href="about.html" data-i18n-key="navAbout">關於我們</a></li>
-                        <li><a href="technology.html" data-i18n-key="navTech">我們的技術</a></li>
+                        <li><a href="about.html" data-i18n-key="navAbout">關於</a></li>
+                        <li><a href="technology.html" data-i18n-key="navTech">技術</a></li>
+                        <li><a href="products.html" data-i18n-key="navProducts">產品介紹</a></li>
                         <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
                         <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
                         <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
@@ -132,6 +139,21 @@
         navToggle.addEventListener('click', () => {
             document.body.classList.toggle('nav-open');
         });
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "永環材料股份有限公司 (SusMaterial)",
+        "url": "https://susmaterial.com/",
+        "logo": "https://susmaterial.com/assets/logo.png",
+        "knowsAbout": ["鎢粉", "再生鎢粉", "三氧化鎢", "氧化鎢", "鎢鋼回收", "循環經濟", "低碳材料"],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@susmaterial.com",
+            "contactType": "customer service"
+        }
+    }
     </script>
 </body>
 </html>

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於我們 - 永環材料 (SusMaterial)</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;">
+                <img src="assets/logo.png" alt="SusMaterial Logo">
             </a>
 
             <button class="nav-toggle" aria-label="toggle navigation">
@@ -20,16 +22,15 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
-                    <li><a href="about.html" data-i18n-key="navAbout">關於</a></li>
-                    <li><a href="technology.html" data-i18n-key="navTech">技術</a></li>
+                    <li><a href="about.html" class="active" data-i18n-key="navAbout">關於</a></li>
                     <li><a href="products.html" data-i18n-key="navProducts">產品介紹</a></li>
                     <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
                     <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
                     <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                    <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                    <li><a href="contact.html" class="nav-cta-btn" data-i18n-key="navContact">聯絡我們</a></li>
                 </ul>
             </nav>
-            
+
             <div class="language-switcher">
                 <button class="lang-btn active" data-lang="zh-TW">繁中</button>
                 <button class="lang-btn" data-lang="en-US">EN</button>
@@ -41,26 +42,28 @@
         <section class="page-hero">
             <div class="container">
                 <h1 class="page-title" data-i18n-key="aboutPageTitle">關於永環材料</h1>
-                <p class="page-subtitle" data-i18n-key="aboutPageSubtitle1">我們的願景是成為全球領先的「低碳材料供應夥伴」，以創新的綠色循環技術，</p>
-                <p class="page-subtitle" data-i18n-key="aboutPageSubtitle2">將工業廢料轉化為高價值的再生材料，真正實現循環經濟的理想。</p>
+                <p class="page-subtitle" data-i18n-key="aboutPageSubtitle1">我們的願景是成為全球領先的「低碳材料供應夥伴」，</p>
+                <p class="page-subtitle" data-i18n-key="aboutPageSubtitle2">透過高效率的循環製程，穩定供應高品質金屬原料。</p>
             </div>
         </section>
 
         <section class="content-section" style="background-color: var(--bg-surface);">
-             <div class="container reveal">
+            <div class="container reveal">
                 <h2 class="section-title" data-i18n-key="aboutCoreTitle">我們的核心理念</h2>
                 <div class="philosophy-grid">
                     <div class="feature-item">
-                        <h3 data-i18n-key="aboutCore1Title">環境永續</h3>
-                        <p data-i18n-key="aboutCore1Desc">我們深信，工業發展與環境保護可以並行不悖。我們的技術核心目標就是工業減碳，每噸再生金屬能有效降低 40%-80% 的碳排放。選擇永環，就是選擇對地球更友善的未來。</p>
+                        <h3 data-i18n-key="aboutCore1Title">穩定貨源</h3>
+                        <p data-i18n-key="aboutCore1Desc">透過成熟的再生流程，我們能確保關鍵綠色材料的穩定產出，幫助客戶避開國際礦產市場的價格與供應鏈波動風險。</p>
                     </div>
                     <div class="feature-item">
-                        <h3 data-i18n-key="aboutCore2Title">技術創新</h3>
-                        <p data-i18n-key="aboutCore2Desc">創新是我們的DNA。獨家的「創新合金循環技術」，將傳統複雜的工序大幅簡化，實現碳排放減量。這不僅是製程的簡化，更是對效率與環保永續的重新定義。</p>
+                        <h3 data-i18n-key="aboutCore2Title">高品質追求</h3>
+                        <p data-i18n-key="aboutCore2Desc">
+                            純度與品質是原物料應用的關鍵。我們專注於將材料純化工藝發揮到極致，穩定供應純度達 99.9% 甚至以上的頂級金屬材料。</p>
                     </div>
                     <div class="feature-item">
-                        <h3 data-i18n-key="aboutCore3Title">協助綠色轉型</h3>
-                        <p data-i18n-key="aboutCore3Desc">我們致力於以永續理念促進產業升級。藉由永環的創新服務技術，我們提供客製化高品質產品與服務水準，促進客戶滿意度與市場競爭力。</p>
+                        <h3 data-i18n-key="aboutCore3Title">客戶至上服務</h3>
+                        <p data-i18n-key="aboutCore3Desc">我們致力於了解各產業的需求。藉由嚴格的品管與客製化的產能調配，我們提供最高水準的服務，促進客戶滿意度與市場競爭力。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -68,8 +71,46 @@
 
         <section class="content-section">
             <div class="container reveal">
+                <h2 class="section-title" data-i18n-key="aboutSdgTitle">響應聯合國永續發展目標 (SDGs)</h2>
+                <div class="section-intro" style="display: flex; justify-content: center; text-align: center;">
+                    <span style="font-size: clamp(0.9rem, 2vw, 1.1rem); color: var(--text-secondary);"
+                        data-i18n-key="aboutSdgDesc">永環材料的技術與營運模式，高度契合國際永續趨勢，<br>致力於為全球環境帶來實質的正面影響力。</span>
+                </div>
+                <div class="features-grid mt-2" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="feature-item md-card elevation-1" style="text-align: left; padding: 2rem;">
+                        <h3 data-i18n-key="aboutSdg9Title"
+                            style="color: var(--primary-accent); margin-bottom: 1rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 1.5rem; margin-right: 0.5rem;">🏗️</span>目標 9：工業與創新
+                        </h3>
+                        <p data-i18n-key="aboutSdg9Desc" style="color: var(--text-secondary);">
+                            透過革命性的低碳精煉技術，推動傳統金屬回收產業的創新升級，建立更具韌性且永續的工業基礎。</p>
+                    </div>
+                    <div class="feature-item md-card elevation-1" style="text-align: left; padding: 2rem;">
+                        <h3 data-i18n-key="aboutSdg12Title"
+                            style="color: var(--primary-accent); margin-bottom: 1rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 1.5rem; margin-right: 0.5rem;">♻️</span>目標 12：責任消費與生產
+                        </h3>
+                        <p data-i18n-key="aboutSdg12Desc" style="color: var(--text-secondary);">
+                            將廢棄合金轉化為高純度再生材料，極大化資源的利用率，建構完美的金屬閉環供應鏈，落實循環經濟。</p>
+                    </div>
+                    <div class="feature-item md-card elevation-1" style="text-align: left; padding: 2rem;">
+                        <h3 data-i18n-key="aboutSdg13Title"
+                            style="color: var(--primary-accent); margin-bottom: 1rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; display: flex; align-items: center; white-space: nowrap;">
+                            <span style="font-size: 1.5rem; margin-right: 0.5rem;">🌍</span>目標 13：氣候行動
+                        </h3>
+                        <p data-i18n-key="aboutSdg13Desc" style="color: var(--text-secondary);">協助全球企業建立低碳供應鏈，邁向淨零目標
+                            (Net Zero) 的承諾。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section Hidden per strategy 
+        <section class="content-section">
+            <div class="container reveal">
                 <h2 class="section-title" data-i18n-key="aboutTeamTitle">專業、熱情、使命必達的團隊</h2>
-                <p class="section-intro" data-i18n-key="aboutTeamIntro">我們的團隊由材料科學、資源循環、商業營運等領域的專家組成，共同致力於以科技解決方案應對全球性的環境挑戰。</p>
+                <p class="section-intro" data-i18n-key="aboutTeamIntro">
+                    我們的團隊由材料科學、資源循環、商業營運等領域的專家組成，共同致力於以科技解決方案應對全球性的環境挑戰。</p>
                 <div class="team-grid">
                     <div class="team-member">
                         <img src="assets/team-ceo.png" alt="鄭梓民博士">
@@ -84,7 +125,7 @@
                         <p data-i18n-key="aboutTeamCtoDesc">材料分析與低碳製程開發的專家，專長電化學技術應用與第一原理材料模擬，確保我們的技術始終保持在世界領先水平。</p>
                     </div>
                     <div class="team-member">
-                         <img src="assets/team-coo.jpg" alt="黃渤珽">
+                        <img src="assets/team-coo.jpg" alt="黃渤珽">
                         <h4 data-i18n-key="aboutTeamCooName">黃渤珽</h4>
                         <span class="title" data-i18n-key="aboutTeamCooTitle">營運長 (COO)</span>
                         <p data-i18n-key="aboutTeamCooDesc">擅長產品設計與跨部門營運整合，負責將創新技術轉化為穩定可靠的商業服務，確保技術與市場需求的完美契合。</p>
@@ -92,35 +133,44 @@
                 </div>
             </div>
         </section>
+        -->
     </main>
 
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-contact-info">
-                    <h3><img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;"></h3>
-                    <p data-i18n-key="footerContactAddress">地址: 310401新竹縣竹東鎮中興路四段195號52館526室</p>
-                    <p data-i18n-key="footerContactEmail">Email: <a href="mailto:info@susmaterial.com">info@susmaterial.com</a></p>
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 60px;">
+                    <p data-i18n-key="footerSlogan">定義低碳材料的未來，穩定供應的綠色循環夥伴。</p>
                 </div>
                 <div class="footer-links">
-                    <h3 data-i18n-key="footerSitemapTitle">網站地圖</h3>
+                    <h3 data-i18n-key="footerSitemapQuick">快速導覽</h3>
                     <ul>
-                        <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
                         <li><a href="about.html" data-i18n-key="navAbout">關於我們</a></li>
-                        <li><a href="technology.html" data-i18n-key="navTech">我們的技術</a></li>
-                        <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
-                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
-                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                        <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                        <li><a href="products.html" data-i18n-key="navProducts">高純度鎢粉產品</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-i18n-key="footerCopyright">&copy; 2025 SusMaterial Inc. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <h3 data-i18n-key="footerSitemapResources">企業資源</h3>
+                    <ul>
+                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
+                        <li><a href="services.html" data-i18n-key="navServices">ESG 代工服務</a></li>
+                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-info">
+                    <h3 data-i18n-key="footerSitemapContact">聯絡與追蹤</h3>
+                    <p data-i18n-key="footerContactAddress">310401新竹縣竹東鎮中興路四段195號52館526室</p>
+                    <p data-i18n-key="footerContactEmail"><a href="mailto:info@susmaterial.com"
+                            style="color: var(--primary-accent);">info@susmaterial.com</a></p>
+                </div>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p data-i18n-key="footerCopyright">© 2026 SusMaterial Inc. All Rights Reserved.</p>
+        </div>
     </footer>
-    
+
     <script src="app.js"></script>
     <script>
         function reveal() {
@@ -136,7 +186,7 @@
         }
         window.addEventListener("scroll", reveal);
         reveal();
-        
+
         const navToggle = document.querySelector('.nav-toggle');
         const mainNav = document.querySelector('.main-nav');
         navToggle.addEventListener('click', () => {
@@ -144,4 +194,5 @@
         });
     </script>
 </body>
+
 </html>

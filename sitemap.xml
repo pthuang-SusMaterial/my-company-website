@@ -3,6 +3,9 @@
   <url><loc>https://susmaterial.com/index.html</loc><priority>1.0</priority></url>
   <url><loc>https://susmaterial.com/products.html</loc><priority>0.9</priority></url>
   <url><loc>https://susmaterial.com/technology.html</loc><priority>0.8</priority></url>
+  <url><loc>https://susmaterial.com/services.html</loc><priority>0.8</priority></url>
+  <url><loc>https://susmaterial.com/market.html</loc><priority>0.8</priority></url>
+  <url><loc>https://susmaterial.com/about.html</loc><priority>0.8</priority></url>
   <url><loc>https://susmaterial.com/careers.html</loc><priority>0.8</priority></url>
   <url><loc>https://susmaterial.com/job-engineer.html</loc><priority>0.7</priority></url>
   <url><loc>https://susmaterial.com/job-assistant.html</loc><priority>0.7</priority></url>

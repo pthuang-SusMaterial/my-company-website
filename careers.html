@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,11 +15,12 @@
         }
     </style>
 </head>
+
 <body>
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;">
+                <img src="assets/logo.png" alt="SusMaterial Logo">
             </a>
 
             <button class="nav-toggle" aria-label="toggle navigation">
@@ -29,12 +31,11 @@
                 <ul>
                     <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
                     <li><a href="about.html" data-i18n-key="navAbout">關於</a></li>
-                    <li><a href="technology.html" data-i18n-key="navTech">技術</a></li>
                     <li><a href="products.html" data-i18n-key="navProducts">產品介紹</a></li>
                     <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
                     <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
-                    <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                    <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                    <li><a href="careers.html" class="active" data-i18n-key="navCareers">人才招募</a></li>
+                    <li><a href="contact.html" class="nav-cta-btn" data-i18n-key="navContact">聯絡我們</a></li>
                 </ul>
             </nav>
 
@@ -58,21 +59,21 @@
             <div class="container reveal">
                 <h2 class="section-title" data-i18n-key="careersValuesTitle">我們的核心價值</h2>
                 <p class="section-intro" data-i18n-key="careersValuesIntro">我們不是要複製任何一家公司，而是要融合優點，創造屬於我們自己的成功方程式。</p>
-                
+
                 <div class="features-grid" style="margin-top: 3rem;">
-                    
+
                     <div class="feature-item">
                         <div class="feature-icon">🏆</div>
                         <h3 data-i18n-key="careersValue1Title">追求卓越，定義巔峰</h3>
                         <p data-i18n-key="careersValue1Desc">不僅是完成工作，而是要將工作做到極致，成為行業的標竿。</p>
                     </div>
-                    
+
                     <div class="feature-item">
                         <div class="feature-icon">🚀</div>
                         <h3 data-i18n-key="careersValue2Title">擁抱挑戰，智勇創新</h3>
                         <p data-i18n-key="careersValue2Desc">鼓勵創新，並給予容許失敗的空間，因為每一次的嘗試都是通往卓越的必經之路。</p>
                     </div>
-                    
+
                     <!-- <div class="feature-item">
                         <div class="feature-icon">💬</div>
                         <h3 data-i18n-key="careersValue3Title">極致坦率，尊重多元</h3>
@@ -91,76 +92,118 @@
         <section class="content-section">
             <div class="container reveal">
                 <h2 class="section-title" data-i18n-key="careersOpenTitle">開放職缺</h2>
-                
+
                 <p class="bonus-highlight" data-i18n-key="careersBonus">★ 另有績效獎金與員工認股計畫 (ESOP)</p>
 
-                <div class="job-list-container">
+                <div class="features-grid"
+                    style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 2rem;">
 
-                    <div class="job-card">
-                        <div class="job-card-header">
-                            <h3 data-i18n-key="careersJob1Title">製程研發工程師</h3>
-                            <span class="job-tag-fulltime" data-i18n-key="careersJob1Tag">正職</span>
+                    <div class="job-card md-card elevation-1"
+                        style="display: flex; flex-direction: column; justify-content: space-between; text-align: left; padding: 2rem; border-top: 4px solid var(--primary-accent);">
+                        <div>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <h3 data-i18n-key="careersJob1Title"
+                                    style="color: var(--primary-accent); font-size: 1.4rem;">製程研發工程師</h3>
+                                <span class="job-tag-fulltime" data-i18n-key="careersJob1Tag"
+                                    style="background-color: rgba(0, 150, 136, 0.1); color: var(--primary-accent); padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.85rem;">正職</span>
+                            </div>
+                            <div class="job-card-details"
+                                style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                                <p data-i18n-key="careersJob1Loc"
+                                    style="display: flex; align-items: center; gap: 0.5rem;">📍 新竹縣竹東鎮工研院中興院區</p>
+                                <p data-i18n-key="careersJob1Pay"
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">💰
+                                    待遇：面議</p>
+                            </div>
                         </div>
-                        <div class="job-card-details">
-                            <p data-i18n-key="careersJob1Loc">地點：新竹縣竹東鎮工研院中興院區</p>
-                            <p data-i18n-key="careersJob1Pay">待遇：面議</p>
-                        </div>
-                        <a href="job-engineer.html" class="btn btn-secondary" data-i18n-key="careersJob1Btn">查看詳情</a>
+                        <a href="job-engineer.html" class="btn btn-secondary" data-i18n-key="careersJob1Btn"
+                            style="width: 100%; text-align: center;">查看詳情</a>
                     </div>
 
-                    <div class="job-card">
-                        <div class="job-card-header">
-                            <h3 data-i18n-key="careersJob2Title">實驗室助理約聘人員</h3>
-                            <span class="job-tag-contract" data-i18n-key="careersJob2Tag">兼職/約聘</span>
+                    <div class="job-card md-card elevation-1"
+                        style="display: flex; flex-direction: column; justify-content: space-between; text-align: left; padding: 2rem; border-top: 4px solid #F57C00;">
+                        <div>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <h3 data-i18n-key="careersJob2Title"
+                                    style="color: var(--primary-accent); font-size: 1.4rem;">實驗室助理約聘人員</h3>
+                                <span class="job-tag-contract" data-i18n-key="careersJob2Tag"
+                                    style="background-color: rgba(245, 124, 0, 0.1); color: #F57C00; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.85rem;">兼職/約聘</span>
+                            </div>
+                            <div class="job-card-details"
+                                style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                                <p data-i18n-key="careersJob2Loc"
+                                    style="display: flex; align-items: center; gap: 0.5rem;">📍 新竹縣竹東鎮工研院中興院區</p>
+                                <p data-i18n-key="careersJob2Pay"
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">💰
+                                    待遇：面議</p>
+                            </div>
                         </div>
-                        <div class="job-card-details">
-                            <p data-i18n-key="careersJob2Loc">地點：新竹縣竹東鎮工研院中興院區</p>
-                            <p data-i18n-key="careersJob2Pay">待遇：面議</p>
-                        </div>
-                        <a href="job-assistant.html" class="btn btn-secondary" data-i18n-key="careersJob2Btn">查看詳情</a>
+                        <a href="job-assistant.html" class="btn btn-secondary" data-i18n-key="careersJob2Btn"
+                            style="width: 100%; text-align: center;">查看詳情</a>
                     </div>
 
-                    <div class="job-card">
-                        <div class="job-card-header">
-                            <h3 data-i18n-key="careersJob3Title">製程研發實習生</h3>
-                            <span class="job-tag-intern" data-i18n-key="careersJob3Tag">實習</span>
+                    <div class="job-card md-card elevation-1"
+                        style="display: flex; flex-direction: column; justify-content: space-between; text-align: left; padding: 2rem; border-top: 4px solid #1976D2;">
+                        <div>
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <h3 data-i18n-key="careersJob3Title"
+                                    style="color: var(--primary-accent); font-size: 1.4rem;">製程研發實習生</h3>
+                                <span class="job-tag-intern" data-i18n-key="careersJob3Tag"
+                                    style="background-color: rgba(25, 118, 210, 0.1); color: #1976D2; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.85rem;">實習</span>
+                            </div>
+                            <div class="job-card-details"
+                                style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+                                <p data-i18n-key="careersJob3Loc"
+                                    style="display: flex; align-items: center; gap: 0.5rem;">📍 新竹縣竹東鎮工研院中興院區</p>
+                                <p data-i18n-key="careersJob3Pay"
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">💰
+                                    待遇：面議</p>
+                            </div>
                         </div>
-                        <div class="job-card-details">
-                            <p data-i18n-key="careersJob3Loc">地點：新竹縣竹東鎮工研院中興院區</p>
-                            <p data-i18n-key="careersJob3Pay">待遇：面議</p>
-                        </div>
-                        <a href="job-intern.html" class="btn btn-secondary" data-i18n-key="careersJob3Btn">查看詳情</a>
+                        <a href="job-intern.html" class="btn btn-secondary" data-i18n-key="careersJob3Btn"
+                            style="width: 100%; text-align: center;">查看詳情</a>
                     </div>
 
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-contact-info">
-                    <h3><img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;"></h3>
-                    <p data-i18n-key="footerContactAddress">地址: 310401新竹縣竹東鎮中興路四段195號52館526室</p>
-                    <p data-i18n-key="footerContactEmail">Email: <a href="mailto:info@susmaterial.com">info@susmaterial.com</a></p>
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 60px;">
+                    <p data-i18n-key="footerSlogan">定義低碳材料的未來，穩定供應的綠色循環夥伴。</p>
                 </div>
                 <div class="footer-links">
-                    <h3 data-i18n-key="footerSitemapTitle">網站地圖</h3>
+                    <h3 data-i18n-key="footerSitemapQuick">快速導覽</h3>
                     <ul>
-                        <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
                         <li><a href="about.html" data-i18n-key="navAbout">關於我們</a></li>
-                        <li><a href="technology.html" data-i18n-key="navTech">我們的技術</a></li>
-                        <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
-                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
-                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                        <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                        <li><a href="products.html" data-i18n-key="navProducts">高純度鎢粉產品</a></li>
                     </ul>
                 </div>
+                <div class="footer-links">
+                    <h3 data-i18n-key="footerSitemapResources">企業資源</h3>
+                    <ul>
+                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
+                        <li><a href="services.html" data-i18n-key="navServices">ESG 代工服務</a></li>
+                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-info">
+                    <h3 data-i18n-key="footerSitemapContact">聯絡與追蹤</h3>
+                    <p data-i18n-key="footerContactAddress">310401新竹縣竹東鎮中興路四段195號52館526室</p>
+                    <p data-i18n-key="footerContactEmail"><a href="mailto:info@susmaterial.com"
+                            style="color: var(--primary-accent);">info@susmaterial.com</a></p>
+                </div>
             </div>
-            <div class="footer-bottom">
-                <p data-i18n-key="footerCopyright">© 2025 SusMaterial Inc. All Rights Reserved.</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n-key="footerCopyright">© 2026 SusMaterial Inc. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -179,7 +222,7 @@
         }
         window.addEventListener("scroll", reveal);
         reveal();
-        
+
         const navToggle = document.querySelector('.nav-toggle');
         const mainNav = document.querySelector('.main-nav');
         navToggle.addEventListener('click', () => {
@@ -187,4 +230,5 @@
         });
     </script>
 </body>
+
 </html>

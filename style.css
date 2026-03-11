@@ -2,15 +2,28 @@
    1. 全域設定 (Global Settings)
    ========================================================================== */
 :root {
-    --bg-dark: #121212;
-    --bg-surface: #1e1e1e;
-    --primary-accent: #00f5a0;
-    --primary-accent-darker: #00d48a;
-    --text-primary: #e0e0e0;
-    --text-secondary: #a0a0a0;
-    --border-color: #333333;
+    --bg-dark: #f5f6fa;
+    /* 淺色背景 (原本的 dark 現在轉為 light) */
+    --bg-surface: #ffffff;
+    /* 純白卡片 */
+    --primary-accent: #8ec31f;
+    /* 品牌綠保持不變 */
+    --primary-accent-darker: #75a019;
+    --text-primary: #333333;
+    /* 主文字改為深色 */
+    --text-secondary: #666666;
+    /* 次要文字改為中灰 */
+    --border-color: #e0e0e0;
+    /* 邊線改為柔和淺灰 */
     --white-color: #ffffff;
-    --font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+    /* 保留供反白使用 */
+    --font-family: 'Roboto', 'Inter', 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+
+    /* Material Design Shadows (Dark Mode Adjusted) */
+    --mdc-elevation-1: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    --mdc-elevation-2: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    --mdc-elevation-3: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+    --mdc-elevation-4: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
 * {
@@ -30,6 +43,27 @@ body {
     background-color: var(--bg-dark);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* 現代 CSS 防孤字 (Orphan prevention) 控制 */
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* 讓標題左右配平，避免單字掉到下一行 */
+    text-wrap: balance;
+}
+
+p,
+li,
+span,
+a,
+div {
+    /* 長篇文字防孤字 */
+    text-wrap: pretty;
 }
 
 .container {
@@ -50,7 +84,8 @@ body {
 /* 確保所有圖片不會超出容器寬度 */
 .infographic-container img {
     max-width: 100%;
-    height: auto; /* 讓高度自動縮放，維持比例 */
+    height: auto;
+    /* 讓高度自動縮放，維持比例 */
 }
 
 /* 設定特定圖片的高度 */
@@ -60,6 +95,75 @@ body {
 
 .chart-small {
     height: 180px;
+}
+
+/* --- Utility Classes --- */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Material Design Elevation Utility */
+.elevation-1 {
+    box-shadow: var(--mdc-elevation-1);
+}
+
+.elevation-2 {
+    box-shadow: var(--mdc-elevation-2);
+}
+
+.elevation-3 {
+    box-shadow: var(--mdc-elevation-3);
+}
+
+/* Material Design Card Component */
+.md-card {
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: var(--mdc-elevation-1);
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Subtle border for light mode */
+}
+
+.md-card:hover {
+    box-shadow: var(--mdc-elevation-4);
+    transform: translateY(-4px);
 }
 
 /* ==========================================================================
@@ -73,21 +177,25 @@ body {
     opacity: 0;
     transition: 1s all ease;
 }
+
 .reveal.active {
     transform: translateY(0);
     opacity: 1;
 }
+
 .comparison-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin: 3rem 0;
 }
+
 .comparison-column {
     background-color: var(--bg-surface);
     padding: 2rem;
     border-radius: 8px;
 }
+
 .comparison-column h3 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
@@ -95,27 +203,53 @@ body {
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 1rem;
 }
-.comparison-column ul { list-style: none; }
-.comparison-column li { margin-bottom: 1rem; font-size: 1.1rem; }
-.comparison-column .advantage { color: var(--primary-accent); }
-.comparison-column .disadvantage { color: #ff6b6b; }
+
+.comparison-column ul {
+    list-style: none;
+}
+
+.comparison-column li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.comparison-column .advantage {
+    color: var(--primary-accent);
+}
+
+.comparison-column .disadvantage {
+    color: #ff6b6b;
+}
+
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
 }
+
 .market-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
+
 .market-card {
+    /* Extending .md-card behavior */
     background-color: var(--bg-surface);
     padding: 2rem;
     border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--mdc-elevation-1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.market-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--mdc-elevation-3);
+}
+
 blockquote {
     border-left: 4px solid var(--primary-accent);
     padding-left: 1.5rem;
@@ -124,19 +258,27 @@ blockquote {
     font-style: italic;
     color: var(--text-secondary);
 }
+
 /* --- 服務頁 --- */
-.service-list, .process-steps {
+.service-list,
+.process-steps {
     list-style: none;
     margin-top: 2rem;
 }
+
 .service-list li {
     background: var(--bg-surface);
     margin-bottom: 0.5rem;
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
 }
-.process-steps { position: relative; }
-.process-steps::before { /* Timeline line */
+
+.process-steps {
+    position: relative;
+}
+
+.process-steps::before {
+    /* Timeline line */
     content: '';
     position: absolute;
     left: 30px;
@@ -145,11 +287,13 @@ blockquote {
     width: 4px;
     background-color: var(--border-color);
 }
+
 .step {
     position: relative;
     padding-left: 55px;
     margin-bottom: 2.5rem;
 }
+
 .step-number {
     position: absolute;
     left: 10px;
@@ -166,18 +310,40 @@ blockquote {
     align-items: center;
     border: 5px solid var(--bg-dark);
 }
-.step h4 { font-size: 1.4rem; color: var(--white-color); }
-.step p { color: var(--text-secondary); }
+
+.step h4 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+}
+
+.step p {
+    color: var(--text-secondary);
+}
 
 /* --- 導覽列 (Header) --- */
+.nav-toggle {
+    display: none;
+    /* Hide on desktop by default */
+}
+
 .main-header {
-    background-color: rgba(18, 18, 18, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Light glassmorphism */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e0e0e0;
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 9998;
+    transition: box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+/* Applied via JS when scrolling */
+.main-header.scrolled {
+    box-shadow: var(--mdc-elevation-3);
+    padding: 0.5rem 0;
+    /* Shrink slightly on scroll */
+    background-color: rgba(255, 255, 255, 0.98);
 }
 
 .main-header .container {
@@ -187,46 +353,97 @@ blockquote {
 }
 
 .logo img {
-    height: 50px; /* 控制 Logo 圖片高度 */
+    height: 50px;
+    /* 控制 Logo 圖片高度 */
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.05);
 }
 
 /* 電腦版導覽列 */
 .main-nav ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* 使用 gap 統一管理間距，縮小間距防止跑版 */
 }
 
 .main-nav ul li {
-    margin-left: 2rem;
+    margin-left: 0;
 }
 
 .main-nav ul li a {
     text-decoration: none;
-    color: var(--text-secondary);
+    color: #333333;
     font-weight: 500;
     font-size: 1rem;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s ease, border-color 0.3s ease;
+    padding: 0.5rem 0.2rem;
+    margin: 0;
+    position: relative;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    /* 避免文字斷行 */
+}
+
+/* Underline Animation (Material tab feel) */
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-accent);
+    transition: width 0.3s ease;
 }
 
 .main-nav ul li a:hover,
 .main-nav ul li a.active {
-    color: var(--primary-accent);
-    border-bottom-color: var(--primary-accent);
+    color: var(--primary-accent-darker);
+}
+
+.main-nav ul li a:hover::after,
+.main-nav ul li a.active::after {
+    width: 100%;
+}
+
+.main-nav ul li a.nav-cta-btn {
+    display: inline-block;
+    background-color: var(--primary-accent);
+    color: var(--bg-dark);
+    /* Keep dark for good contrast with accent */
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.main-nav ul li a.nav-cta-btn::after {
+    display: none;
+    /* No underline for button */
+}
+
+.main-nav ul li a.nav-cta-btn:hover {
+    background-color: var(--primary-accent-darker);
+    box-shadow: var(--mdc-elevation-2);
 }
 
 /* --- [新增] 語言切換器 (Language Switcher) --- */
 .language-switcher {
-    margin-left: 1rem; /* 與導覽列保持一點距離 */
+    margin-left: 1rem;
+    /* 與導覽列保持一點距離 */
     display: flex;
     gap: 0.5rem;
 }
+
 .lang-btn {
     background: none;
-    border: 1px solid var(--border-color);
-    color: var(--text-secondary);
+    border: 1px solid #ccc;
+    color: #555;
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
     cursor: pointer;
@@ -234,86 +451,149 @@ blockquote {
     font-size: 0.9rem;
     transition: all 0.3s ease;
 }
+
 .lang-btn:hover {
-    color: var(--white-color);
-    border-color: var(--text-secondary);
+    color: var(--primary-accent-darker);
+    border-color: var(--primary-accent-darker);
 }
+
 .lang-btn.active {
-    color: var(--primary-accent);
-    border-color: var(--primary-accent);
+    color: var(--primary-accent-darker);
+    border-color: var(--primary-accent-darker);
     font-weight: bold;
 }
+
 /* --- 結束 [新增] --- */
 
 
-/* --- 頁尾 (Footer) --- */
+/* --- 頁尾 (Footer - Mega Layout) --- */
 .main-footer {
     background-color: var(--bg-surface);
-    padding: 4rem 0 2rem 0;
+    padding: 4rem 0 0 0;
+    /* Removed bottom padding, moved to content/bottom */
     border-top: 1px solid var(--border-color);
 }
+
 .footer-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 3rem;
     margin-bottom: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 2rem;
 }
+
 .main-footer h3 {
-    color: var(--white-color);
-    margin-bottom: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
     font-size: 1.2rem;
+    font-weight: 600;
 }
-.main-footer a {
+
+.footer-brand p {
     color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.3s ease;
+    margin-top: 1rem;
+    max-width: 300px;
 }
-.main-footer a:hover {
-    color: var(--primary-accent);
-}
-.footer-contact-info p {
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
-}
+
 .footer-links ul {
     list-style: none;
 }
+
 .footer-links ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
+
+.main-footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.main-footer a:hover {
+    color: var(--primary-accent);
+    transform: translateX(3px);
+    /* Subtly move right on hover */
+}
+
+.footer-contact-info p {
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+}
+
 .footer-bottom {
     text-align: center;
     color: var(--text-secondary);
     font-size: 0.9rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* --- 按鈕 (Buttons) --- */
+/* --- 按鈕 (Buttons - Material Design Ripple/Hover) --- */
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.8rem 2rem;
-    border-radius: 50px;
+    border-radius: 28px;
+    /* Material pill shape */
     text-decoration: none;
-    font-weight: 700;
-    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
     border: 2px solid transparent;
     cursor: pointer;
     margin: 5px;
+    box-shadow: var(--mdc-elevation-2);
+    position: relative;
+    overflow: hidden;
 }
+
+/* Generic ripple effect implementation on hover */
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.btn:active::after {
+    opacity: 0;
+    transition: 0s;
+}
+
 .btn-primary {
     background-color: var(--primary-accent);
-    color: #000;
+    color: var(--bg-dark);
 }
+
 .btn-primary:hover {
     background-color: var(--primary-accent-darker);
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 245, 160, 0.2);
 }
+
 .btn-secondary {
     color: var(--primary-accent);
     border-color: var(--primary-accent);
 }
+
 .btn-secondary:hover {
     background-color: var(--primary-accent);
     color: #000;
@@ -327,32 +607,38 @@ blockquote {
     text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
+
 .page-title {
     font-size: 3rem;
-    color: var(--white-color);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
+
 .page-subtitle {
     font-size: 1.1rem;
     color: var(--text-secondary);
     max-width: 700px;
     margin: 0 auto;
 }
+
 .content-section {
     padding: 80px 0;
 }
+
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
 }
+
 .section-intro {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 3rem auto;
     color: var(--text-secondary);
 }
+
 .highlight {
     color: var(--primary-accent);
 }
@@ -370,12 +656,17 @@ blockquote {
     background: url('assets/hero-background.jpg') no-repeat center center/cover;
     z-index: 1;
 }
+
 .hero-overlay {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to right, rgba(18, 18, 18, 0.95), rgba(18, 18, 18, 0.7));
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.65));
     z-index: 2;
 }
+
 .hero-content {
     position: relative;
     max-width: 800px;
@@ -383,41 +674,70 @@ blockquote {
     margin: 0 auto;
     z-index: 3;
 }
+
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
-    color: var(--white-color, #fff);
+    color: var(--text-primary);
 }
+
 .hero-subtitle {
     font-size: 1.2rem;
     font-weight: 300;
     margin-bottom: 2rem;
     color: var(--text-secondary);
 }
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
+
+.features-grid.grid-4 {
+    /* 強制設定列數，防止被 auto-fit 推擠成 3+1 */
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .features-grid.grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .features-grid.grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 .feature-item {
     background-color: var(--bg-surface);
     padding: 2rem;
     border-radius: 8px;
-    border-left: 4px solid var(--primary-accent);
-    transition: transform 0.3s ease;
+    border-top: 4px solid var(--primary-accent);
+    /* Move accent block to top for Material feel */
+    border-left: none;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--mdc-elevation-1);
 }
+
 .feature-item:hover {
     transform: translateY(-5px);
+    box-shadow: var(--mdc-elevation-4);
 }
+
 .feature-item h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
+
 .feature-item p {
     color: var(--text-secondary);
 }
+
 .feature-icon {
     font-size: 2.5rem;
     color: var(--primary-accent);
@@ -431,12 +751,14 @@ blockquote {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
+
 .team-member {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
@@ -445,10 +767,12 @@ blockquote {
     padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .team-member:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .team-member img {
     width: 120px;
     height: 120px;
@@ -457,17 +781,20 @@ blockquote {
     margin: 0 auto 1rem auto;
     border: 3px solid var(--primary-accent);
 }
+
 .team-member h4 {
     font-size: 1.2rem;
-    color: var(--white-color);
+    color: var(--text-primary);
     margin-bottom: 0.25rem;
 }
+
 .team-member .title {
     display: block;
     color: var(--primary-accent);
     margin-bottom: 1rem;
     font-size: 0.9rem;
 }
+
 .team-member p {
     font-size: 0.9rem;
     color: var(--text-secondary);
@@ -481,33 +808,41 @@ blockquote {
     gap: 3rem;
     margin-top: 3rem;
 }
+
 .contact-info p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
 }
+
 .contact-info a {
     color: var(--primary-accent);
     text-decoration: none;
 }
+
 .map-container {
     background-color: var(--bg-surface);
     border-radius: 8px;
     margin-top: 2rem;
-    overflow: hidden; /* 確保地圖不會超出圓角 */
+    overflow: hidden;
+    /* 確保地圖不會超出圓角 */
 }
+
 .map-container iframe {
     width: 100%;
     height: 300px;
     border: 0;
 }
+
 .contact-form .form-group {
     margin-bottom: 1.5rem;
 }
+
 .contact-form label {
     display: block;
     margin-bottom: 0.5rem;
     color: var(--text-secondary);
 }
+
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
@@ -520,12 +855,14 @@ blockquote {
     font-family: var(--font-family);
     font-size: 1rem;
 }
+
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
     outline: none;
     border-color: var(--primary-accent);
 }
+
 .contact-form textarea {
     min-height: 150px;
     resize: vertical;
@@ -537,20 +874,29 @@ blockquote {
 @media (max-width: 768px) {
 
     /* --- General Layout --- */
-    .footer-content, .contact-grid, .team-grid, .philosophy-grid, .features-grid {
+    .footer-content,
+    .contact-grid,
+    .team-grid,
+    .philosophy-grid,
+    .features-grid {
         grid-template-columns: 1fr;
     }
+
     .comparison-grid {
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-    .hero-title, .page-title {
+
+    .hero-title,
+    .page-title {
         font-size: 2.5rem;
     }
 
     /* --- [修改] 手機版導覽列 --- */
     .language-switcher {
-        display: none; /* 在漢堡選單模式下，先隱藏電腦版切換器 */
+        display: none;
+        /* 在漢堡選單模式下，先隱藏電腦版切換器 */
     }
+
     /* --- 結束 [修改] --- */
 
 
@@ -566,19 +912,22 @@ blockquote {
         right: 1.5rem;
         z-index: 10000;
     }
+
     .hamburger {
         display: block;
         position: relative;
     }
+
     .hamburger,
     .hamburger::before,
     .hamburger::after {
-        background: var(--text-primary);
+        background: #333333;
         width: 2em;
         height: 3px;
         border-radius: 1em;
         transition: transform 250ms ease-in-out;
     }
+
     .hamburger::before,
     .hamburger::after {
         content: '';
@@ -586,8 +935,14 @@ blockquote {
         left: 0;
         right: 0;
     }
-    .hamburger::before { top: 6px; }
-    .hamburger::after { bottom: 6px; }
+
+    .hamburger::before {
+        top: 6px;
+    }
+
+    .hamburger::after {
+        bottom: 6px;
+    }
 
     /* --- Mobile Navigation: Menu Panel --- */
     .main-nav {
@@ -602,6 +957,7 @@ blockquote {
         transform: translateX(100%);
         transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
     }
+
     .main-nav ul {
         flex-direction: column;
         justify-content: center;
@@ -609,12 +965,15 @@ blockquote {
         height: 100%;
         width: 100%;
         margin: 0;
-        padding: 6rem 0; /* 上下留白，避免內容被切到 */
+        padding: 6rem 0;
+        /* 上下留白，避免內容被切到 */
     }
+
     .main-nav ul li {
         margin: 0.5rem 0;
     }
-    .main-nav a {
+
+    .main-nav ul li a {
         font-size: 1.5rem;
         padding: 1rem;
         color: white;
@@ -627,22 +986,28 @@ blockquote {
     .nav-open .main-nav {
         transform: translateX(0);
     }
-    .nav-open .main-nav a {
+
+    .nav-open .main-nav ul li a {
         opacity: 1;
         transform: translateY(0);
         transition-delay: 200ms;
     }
+
     .nav-open .hamburger {
         transform: rotate(.625turn);
     }
+
     .nav-open .hamburger::before {
         transform: rotate(90deg) translateX(-6px);
     }
+
     .nav-open .hamburger::after {
         opacity: 0;
     }
+
     .nav-open body {
-        overflow: hidden; /* 防止背景滾動 */
+        overflow: hidden;
+        /* 防止背景滾動 */
     }
 
     /* --- [新增] 手機版語言切換器 (放在漢堡選單內部) --- */
@@ -657,224 +1022,348 @@ blockquote {
         display: flex;
         justify-content: center;
         margin-top: 2rem;
-        opacity: 0; /* 配合選單淡入 */
+        opacity: 0;
+        /* 配合選單淡入 */
         transform: translateY(1rem);
         transition: opacity 250ms linear, transform 250ms ease-in-out;
     }
+
     .nav-open .main-nav .language-switcher {
         opacity: 1;
         transform: translateY(0);
         transition-delay: 200ms;
     }
+
     /* --- 結束 [新增] --- */
 
 
-/* ==========================================================================
+    /* ==========================================================================
    5. 人才招募頁面樣式 (Careers Page)
    ========================================================================== */
 
-/* --- 核心價值 UI (優化版) --- */
-.value-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 網格 */
-    gap: 3rem 2rem; /* 上下 3rem, 左右 2rem */
-    margin-top: 4rem;
-}
-
-.value-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    position: relative;
-    padding-left: 1.5rem; /* 留出空間給裝飾線條 */
-}
-
-/* 關鍵的綠色裝飾線條 */
-.value-card::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 5px; /* 對齊圖示頂部 */
-    width: 4px;
-    height: 50px; /* 線條高度 */
-    background-color: var(--primary-accent);
-    border-radius: 2px;
-}
-
-.value-icon img {
-    width: 40px; /* 圖示大小 */
-    height: 40px;
-    margin-top: 5px; /* 讓圖示和文字對齊更精確 */
-}
-
-.value-content h3 {
-    font-size: 1.5rem;
-    color: var(--white-color);
-    margin-bottom: 0.5rem;
-}
-
-.value-content p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-/* --- 職缺列表 (careers.html) --- */
-.job-list-container {
-    max-width: 800px;
-    margin: 2rem auto 0 auto;
-}
-.job-card {
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.5rem 2rem;
-    margin-bottom: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-.job-card:hover {
-    border-color: var(--primary-accent);
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-.job-card-header {
-    flex-basis: 40%;
-}
-.job-card-header h3 {
-    font-size: 1.5rem;
-    color: var(--white-color);
-    margin-bottom: 0.25rem;
-}
-.job-card-details {
-    flex-basis: 35%;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-.job-tag-fulltime, .job-tag-contract, .job-tag-intern {
-    font-size: 0.9rem;
-    padding: 2px 8px;
-    border-radius: 20px;
-    font-weight: bold;
-}
-.job-tag-fulltime { background-color: var(--primary-accent); color: #000; }
-.job-tag-contract { background-color: #ffc107; color: #000; }
-.job-tag-intern { background-color: #17a2b8; color: var(--white-color); }
-
-/* --- 職缺詳情頁 (job-detail.html) --- */
-.job-detail-tag {
-    background-color: var(--bg-surface);
-    color: var(--text-secondary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    margin-right: 0.5rem;
-}
-.job-detail-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-}
-.job-detail-main h2 {
-    font-size: 2rem;
-    color: var(--white-color);
-    margin-bottom: 1rem;
-}
-.job-detail-main h3 {
-    color: var(--primary-accent);
-    font-size: 1.4rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    border-left: 3px solid var(--primary-accent);
-    padding-left: 0.5rem;
-}
-.job-detail-main ul {
-    list-style-position: inside;
-    padding-left: 0.5rem;
-}
-.job-detail-main ul li {
-    margin-bottom: 0.75rem;
-}
-.job-detail-sidebar .sidebar-widget {
-    background-color: var(--bg-surface);
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    position: sticky;
-    top: 120px; /* 捲動時固定的位置 (需依您 header 高度微調) */
-}
-.job-detail-sidebar h4 {
-    color: var(--white-color);
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
-}
-.job-detail-sidebar ul {
-    list-style: none;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-.job-detail-sidebar ul li {
-    margin-bottom: 0.5rem;
-}
-.job-detail-sidebar p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-
-/* --- 職缺頁 RWD --- */
-@media (max-width: 768px) {
+    /* --- 核心價值 UI (優化版) --- */
     .value-grid {
-        grid-template-columns: 1fr; /* 核心價值在手機上變為單欄 */
-        gap: 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2x2 網格 */
+        gap: 3rem 2rem;
+        /* 上下 3rem, 左右 2rem */
+        margin-top: 4rem;
     }
-    .job-card {
-        flex-direction: column;
+
+    .value-card {
+        display: flex;
         align-items: flex-start;
-        gap: 1rem;
+        gap: 1.5rem;
+        position: relative;
+        padding-left: 1.5rem;
+        /* 留出空間給裝飾線條 */
     }
+
+    /* 關鍵的綠色裝飾線條 */
+    .value-card::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        /* 對齊圖示頂部 */
+        width: 4px;
+        height: 50px;
+        /* 線條高度 */
+        background-color: var(--primary-accent);
+        border-radius: 2px;
+    }
+
+    .value-icon img {
+        width: 40px;
+        /* 圖示大小 */
+        height: 40px;
+        margin-top: 5px;
+        /* 讓圖示和文字對齊更精確 */
+    }
+
+    .value-content h3 {
+        font-size: 1.5rem;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .value-content p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
+
+    /* --- 職缺列表 (careers.html) --- */
+    .job-list-container {
+        max-width: 800px;
+        margin: 2rem auto 0 auto;
+    }
+
+    .job-card {
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5rem 2rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .job-card:hover {
+        border-color: var(--primary-accent);
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .job-card-header {
+        flex-basis: 40%;
+    }
+
+    .job-card-header h3 {
+        font-size: 1.5rem;
+        color: var(--text-primary);
+        margin-bottom: 0.25rem;
+    }
+
+    .job-card-details {
+        flex-basis: 35%;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+    }
+
+    .job-tag-fulltime,
+    .job-tag-contract,
+    .job-tag-intern {
+        font-size: 0.9rem;
+        padding: 2px 8px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+
+    .job-tag-fulltime {
+        background-color: var(--primary-accent);
+        color: #000;
+    }
+
+    .job-tag-contract {
+        background-color: #ffc107;
+        color: #000;
+    }
+
+    .job-tag-intern {
+        background-color: #17a2b8;
+        color: var(--text-primary);
+    }
+
+    /* --- 職缺詳情頁 (job-detail.html) --- */
+    .job-detail-tag {
+        background-color: var(--bg-surface);
+        color: var(--text-secondary);
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        margin-right: 0.5rem;
+    }
+
     .job-detail-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
     }
-    .job-detail-sidebar {
-        order: -1; /* 在手機上，將側邊欄移到最上方 */
-        position: static; /* 取消固定 */
+
+    .job-detail-main h2 {
+        font-size: 2rem;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
     }
-}
-/* [新增] 職缺頁獎金高亮樣式 */
-.bonus-highlight {
-    text-align: center;
-    color: var(--primary-accent);
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    margin-top: -1rem; /* 讓它離標題近一點 */
-}
-/* ==========================================================
+
+    .job-detail-main ul li {
+        margin-bottom: 0.75rem;
+    }
+
+    .job-detail-sidebar .sidebar-widget {
+        background-color: var(--bg-surface);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        position: sticky;
+        top: 120px;
+        /* 捲動時固定的位置 (需依您 header 高度微調) */
+    }
+
+    .job-detail-sidebar h4 {
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+    }
+
+    .job-detail-sidebar ul {
+        list-style: none;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+    }
+
+    .job-detail-sidebar ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .job-detail-sidebar p {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+    }
+
+    /* --- 職缺頁 RWD --- */
+    @media (max-width: 768px) {
+        .value-grid {
+            grid-template-columns: 1fr;
+            /* 核心價值在手機上變為單欄 */
+            gap: 2.5rem;
+        }
+
+        .job-card {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .job-detail-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .job-detail-sidebar {
+            order: -1;
+            /* 在手機上，將側邊欄移到最上方 */
+            position: static;
+            /* 取消固定 */
+        }
+    }
+
+    /* [新增] 職缺頁獎金高亮樣式 */
+    .bonus-highlight {
+        text-align: center;
+        color: var(--primary-accent);
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        margin-top: -1rem;
+        /* 讓它離標題近一點 */
+    }
+
+    /* ==========================================================
    [僅限 人才招募頁] 核心價值區塊優化
    ========================================================== */
 
-/* * 透過 #careers-values 這個ID，
+    /* * 透過 #careers-values 這個ID，
  * 我們只會鎖定「人才招募頁」上的這個區塊，
  * 絕對不會影響到其他頁面。
  */
-#careers-values .feature-item {
-    text-align: center;       /* 1. 讓所有內容置中 */
-    border-left: none;        /* 2. 移除舊的左側邊框 */
-    border-top: 4px solid var(--primary-accent); /* 3. 改用頂部邊框 */
+    #careers-values .feature-item {
+        text-align: center;
+        /* 1. 讓所有內容置中 */
+        border-left: none;
+        /* 2. 移除舊的左側邊框 */
+        border-top: 4px solid var(--primary-accent);
+        /* 3. 改用頂部邊框 */
 
-    background-color: red !important;
-}
+        background-color: red !important;
+    }
 
-/* (可選) 您也可以在這裡覆蓋網格佈局，
+    /* (可選) 您也可以在這裡覆蓋網格佈局，
    如果您想強制它在電腦上也顯示為 2x2 */
-#careers-values .features-grid {
-    /* 限定 .features-grid 最大寬度為 800px 
+    #careers-values .features-grid {
+        /* 限定 .features-grid 最大寬度為 800px 
        並置中，使其在超寬螢幕上也能保持 2x2
     */
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
 
+    }
+}
+
+/* ==========================================================================
+   Interactive Process Flow & Animations
+   ========================================================================== */
+.process-flow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .process-flow-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}
+
+.process-step {
+    flex: 1;
+    background-color: var(--bg-surface);
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--mdc-elevation-1);
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+}
+
+.process-step:hover {
+    border-color: var(--primary-accent);
+    transform: translateY(-8px);
+    box-shadow: var(--mdc-elevation-4);
+}
+
+.process-step .step-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.process-connector {
+    display: none;
+    font-size: 2rem;
+    color: var(--primary-accent);
+    opacity: 0.4;
+    padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .process-connector {
+        display: block;
+    }
+}
+
+.animate-pulse {
+    animation: pulseBorder 2.5s infinite;
+}
+
+@keyframes pulseBorder {
+    0% {
+        box-shadow: 0 0 0 0 rgba(142, 195, 31, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(142, 195, 31, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(142, 195, 31, 0);
+    }
+}
+
+/* ==========================================================================
+   Stats Counter / Utility
+   ========================================================================== */
+.py-4 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }

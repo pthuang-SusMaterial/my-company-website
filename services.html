@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>服務項目 - 永環材料 (SusMaterial)</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;">
+                <img src="assets/logo.png" alt="SusMaterial Logo">
             </a>
 
             <button class="nav-toggle" aria-label="toggle navigation">
@@ -21,12 +23,11 @@
                 <ul>
                     <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
                     <li><a href="about.html" data-i18n-key="navAbout">關於</a></li>
-                    <li><a href="technology.html" data-i18n-key="navTech">技術</a></li>
                     <li><a href="products.html" data-i18n-key="navProducts">產品介紹</a></li>
-                    <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
+                    <li><a href="services.html" class="active" data-i18n-key="navServices">服務項目</a></li>
                     <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
                     <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                    <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                    <li><a href="contact.html" class="nav-cta-btn" data-i18n-key="navContact">聯絡我們</a></li>
                 </ul>
             </nav>
 
@@ -41,44 +42,121 @@
         <section class="page-hero">
             <div class="container">
                 <h1 class="page-title" data-i18n-key="servicesPageTitle">專業、綠色、高效的金屬循環服務</h1>
-                <p class="page-subtitle" data-i18n-key="servicesPageSubtitle">我們不僅使金屬循環再生，更為您的企業創造永續價值，輕鬆應對全球綠色供應鏈的挑戰。</p>
+                <p class="page-subtitle" data-i18n-key="servicesPageSubtitle"
+                    style="white-space: nowrap; font-size: clamp(0.8rem, 2.8vw, 1.2rem);">
+                    我們不僅使金屬循環再生，更為您的企業創造永續價值，輕鬆應對全球綠色供應鏈的挑戰。</p>
             </div>
         </section>
 
         <section class="content-section">
             <div class="container reveal">
                 <h2 class="section-title" data-i18n-key="servicesListTitle">服務項目</h2>
-                 <div class="comparison-grid" style="margin-top: 2rem;">
-                    <div class="comparison-column">
-                        <h3 data-i18n-key="servicesList1Title"><span class="highlight">✰</span> 金屬循環再生</h3>
-                        <ul class="service-list">
-                            <li data-i18n-key="servicesList1Item1">合金回收再製</li>
-                            <li data-i18n-key="servicesList1Item2">靶材回收再製</li>
-                            <li data-i18n-key="servicesList1Item3">回收料分析與檢驗服務</li>
+                <div class="features-grid mt-2">
+                    <div class="feature-item md-card elevation-1 p-2" style="text-align: left;">
+                        <div class="feature-icon"
+                            style="font-size: 2.5rem; color: var(--primary-accent); margin-bottom: 1rem;">♻️</div>
+                        <h3 data-i18n-key="servicesList1Title" class="mb-1" style="color: var(--primary-accent);">金屬循環再生
+                        </h3>
+                        <ul class="service-list" style="margin-top: 1rem; list-style: none; padding-left: 0;">
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                                <span style="margin-right: 0.5rem; font-size: 1.2rem;">🔄</span>
+                                <span data-i18n-key="servicesList1Item1">合金回收再製</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                                <span style="margin-right: 0.5rem; font-size: 1.2rem;">🎯</span>
+                                <span data-i18n-key="servicesList1Item2">靶材回收再製</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                                <span style="margin-right: 0.5rem; font-size: 1.2rem;">🔬</span>
+                                <span data-i18n-key="servicesList1Item3">回收料分析與檢驗服務</span>
+                            </li>
                         </ul>
                     </div>
-                    <div class="comparison-column">
-                        <h3 data-i18n-key="servicesList2Title"><span class="highlight">✰</span> 客製化原物料提供</h3>
-                         <ul class="service-list">
-                            <li data-i18n-key="servicesList2Item1"><strong>粒徑分布控制：</strong>奈米~微米級範圍。</li>
-                            <li data-i18n-key="servicesList2Item2"><strong>純度控制：</strong>針對不同應用需求，提供不同純度產品。</li>
-                            <li data-i18n-key="servicesList2Item3"><strong>晶體結構設計：</strong>晶體取向調整，優化材料物理表現</li>
+                    <div class="feature-item md-card elevation-1 p-2" style="text-align: left;">
+                        <div class="feature-icon"
+                            style="font-size: 2.5rem; color: var(--primary-accent); margin-bottom: 1rem;">💎</div>
+                        <h3 data-i18n-key="servicesList2Title" class="mb-1" style="color: var(--primary-accent);">
+                            客製化原物料提供</h3>
+                        <ul class="service-list" style="margin-top: 1rem; list-style: none; padding-left: 0;">
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                                <span style="margin-right: 0.5rem; font-size: 1.2rem;">📏</span>
+                                <div><strong data-i18n-key="servicesList2Item1_strong">粒徑分布控制：</strong><span
+                                        data-i18n-key="servicesList2Item1_text">奈米~微米級範圍。</span></div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                                <span style="margin-right: 0.5rem; font-size: 1.2rem;">✨</span>
+                                <div><strong data-i18n-key="servicesList2Item2_strong">純度控制：</strong><span
+                                        data-i18n-key="servicesList2Item2_text">針對不同應用需求，提供不同純度產品。</span></div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                                <span style="margin-right: 0.5rem; font-size: 1.2rem;">🧪</span>
+                                <div><strong data-i18n-key="servicesList2Item3_strong">晶體結構設計：</strong><span
+                                        data-i18n-key="servicesList2Item3_text">晶體取向調整，優化材料物理表現</span></div>
+                            </li>
                         </ul>
                     </div>
-                </div>
-                <div class="comparison-grid" style="margin-top: 2rem;">
-                    <div class="comparison-column">
-                        <h3 data-i18n-key="servicesList3Title"><span class="highlight">✓</span> 為您帶來的價值</h3>
-                         <ul class="service-list">
-                            <li data-i18n-key="servicesList3Item1"><strong>達成 ESG 目標：</strong>顯著提升企業的永續發展績效。</li>
-                            <li data-i18n-key="servicesList3Item2"><strong>降低碳稅風險：</strong>協助您應對歐盟 CBAM 等國際規範。</li>
-                            <li data-i18n-key="servicesList3Item3"><strong>提升品牌形象：</strong>展現您對環保與循環經濟的承諾。</li>
-                            <li data-i18n-key="servicesList3Item4"><strong>創造額外收益：</strong>將廢棄物轉化為有價值的回收收入。</li>
+                    <div class="feature-item md-card elevation-1 p-2" style="text-align: left;">
+                        <div class="feature-icon"
+                            style="font-size: 2.5rem; color: var(--primary-accent); margin-bottom: 1rem;">🌟</div>
+                        <h3 data-i18n-key="servicesList3Title" class="mb-1" style="color: var(--primary-accent);">
+                            為您帶來的價值</h3>
+                        <ul class="service-list" style="margin-top: 1rem; list-style: none; padding-left: 0;">
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                                <span style="margin-right: 0.5rem; font-size: 1.2rem;">🌱</span>
+                                <div><strong data-i18n-key="servicesList3Item1_strong">達成 ESG 目標：</strong><span
+                                        data-i18n-key="servicesList3Item1_text">顯著提升企業的永續發展績效。</span></div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                                <span style="margin-right: 0.5rem; font-size: 1.2rem;">📉</span>
+                                <div><strong data-i18n-key="servicesList3Item2_strong">降低碳稅風險：</strong><span
+                                        data-i18n-key="servicesList3Item2_text">協助您應對歐盟 CBAM 等國際規範。</span></div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                                <span style="margin-right: 0.5rem; font-size: 1.2rem;">🏆</span>
+                                <div><strong data-i18n-key="servicesList3Item3_strong">提升品牌形象：</strong><span
+                                        data-i18n-key="servicesList3Item3_text">展現您對環保與循環經濟的承諾。</span></div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.8rem;">
+                                <span style="margin-right: 0.5rem; font-size: 1.2rem;">💰</span>
+                                <div><strong data-i18n-key="servicesList3Item4_strong">創造額外收益：</strong><span
+                                        data-i18n-key="servicesList3Item4_text">將廢棄物轉化為有價值的回收收入。</span></div>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Interactive Process Flow (Migrated from Tech Page) -->
+        <section class="content-section" style="background-color: var(--bg-surface);">
+            <div class="container reveal">
+                <h2 class="section-title" data-i18n-key="techFlowTitle">創新製程：從廢料到高純度綠色材料</h2>
+                <div class="process-flow-container mt-2">
+                    <div class="process-step">
+                        <div class="step-icon">📦</div>
+                        <h3 data-i18n-key="techFlowStep1Title">1. 廢料進廠</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem;" data-i18n-key="techFlowStep1Desc">
+                            安全合規的回收網絡，確保廢棄靶材與工業廢料妥善分類入庫。</p>
+                    </div>
+                    <div class="process-connector">➔</div>
+                    <div class="process-step animate-pulse">
+                        <div class="step-icon">♻️</div>
+                        <h3 data-i18n-key="techFlowStep2Title">2. 低碳精煉</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem;" data-i18n-key="techFlowStep2Desc">
+                            採用低溫、低化學品用量之獨特單向化程序，大幅降低過程碳排放。</p>
+                    </div>
+                    <div class="process-connector">➔</div>
+                    <div class="process-step">
+                        <div class="step-icon">💎</div>
+                        <h3 data-i18n-key="techFlowStep3Title">3. 穩定出貨</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem;" data-i18n-key="techFlowStep3Desc">
+                            產出 99.9% 甚至更高純度之鎢粉/鎢酸酐，重新投入高端製造供應鏈。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
         <section class="content-section" style="background-color: var(--bg-surface);">
             <div class="container reveal">
@@ -89,64 +167,73 @@
                         <h4 data-i18n-key="servicesProcess1Title">聯繫與諮詢</h4>
                         <p data-i18n-key="servicesProcess1Desc">您可以透過電子郵件或本網站的聯絡表單與我們取得聯繫。請初步告知您廢料的種類、預估數量與現況照片。</p>
                     </div>
-                     <div class="step">
+                    <div class="step">
                         <div class="step-number">2</div>
                         <h4 data-i18n-key="servicesProcess2Title">評估與報價</h4>
-                        <p data-i18n-key="servicesProcess2Desc">我們的專家團隊將根據您提供的資訊進行初步評估。如有需要，我們可能會安排取樣分析，並在最短時間內提供具有競爭力的正式報價。</p>
+                        <p data-i18n-key="servicesProcess2Desc">
+                            我們的專家團隊將根據您提供的資訊進行初步評估。如有需要，我們可能會安排取樣分析，並在最短時間內提供具有競爭力的正式報價。</p>
                     </div>
-                     <div class="step">
+                    <div class="step">
                         <div class="step-number">3</div>
                         <h4 data-i18n-key="servicesProcess3Title">確認與簽約</h4>
                         <p data-i18n-key="servicesProcess3Desc">雙方確認回收價格、數量、收貨方式等合作細節，並簽訂正式合約，保障您的權益。</p>
                     </div>
-                     <div class="step">
+                    <div class="step">
                         <div class="step-number">4</div>
                         <h4 data-i18n-key="servicesProcess4Title">回收與運送</h4>
                         <p data-i18n-key="servicesProcess4Desc">我們將依照合約安排合格的環保運輸車輛，到府或指定地點進行廢料回收作業，確保過程安全合規。</p>
                     </div>
-                     <div class="step">
+                    <div class="step">
                         <div class="step-number">5</div>
                         <h4 data-i18n-key="servicesProcess5Title">專業處理與再生</h4>
                         <p data-i18n-key="servicesProcess5Desc">回收的廢料將進入我們採用創新低碳技術的處理中心，經過高效、環保的程序再生成為高純度材料。</p>
                     </div>
-                     <div class="step">
+                    <div class="step">
                         <div class="step-number">6</div>
                         <h4 data-i18n-key="servicesProcess6Title">完成交易</h4>
-                        <p data-i18n-key="servicesProcess6Desc">在確認廢料重量與品質後，我們將依照合約約定的時程完成付款，並可提供相關的回收處理證明，作為您企業 ESG 報告的支持文件。</p>
+                        <p data-i18n-key="servicesProcess6Desc">在確認廢料重量與品質後，我們將依照合約約定的時程完成付款，並可提供相關的回收處理證明，作為您企業 ESG
+                            報告的支持文件。</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-contact-info">
-                    <h3><img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;"></h3>
-                    <p data-i18n-key="footerContactAddress">地址: 310401新竹縣竹東鎮中興路四段195號52館526室</p>
-                    <p data-i18n-key="footerContactEmail">Email: <a href="mailto:info@susmaterial.com">info@susmaterial.com</a></p>
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 60px;">
+                    <p data-i18n-key="footerSlogan">定義低碳材料的未來，穩定供應的綠色循環夥伴。</p>
                 </div>
                 <div class="footer-links">
-                    <h3 data-i18n-key="footerSitemapTitle">網站地圖</h3>
+                    <h3 data-i18n-key="footerSitemapQuick">快速導覽</h3>
                     <ul>
-                    <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
-                    <li><a href="about.html" data-i18n-key="navAbout">關於</a></li>
-                    <li><a href="technology.html" data-i18n-key="navTech">技術</a></li>
-                    <li><a href="products.html" data-i18n-key="navProducts">產品介紹</a></li>
-                    <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
-                    <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
-                    <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                    <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
-                </ul>
+                        <li><a href="about.html" data-i18n-key="navAbout">關於我們</a></li>
+                        <li><a href="products.html" data-i18n-key="navProducts">高純度鎢粉產品</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 data-i18n-key="footerSitemapResources">企業資源</h3>
+                    <ul>
+                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
+                        <li><a href="services.html" data-i18n-key="navServices">ESG 代工服務</a></li>
+                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-info">
+                    <h3 data-i18n-key="footerSitemapContact">聯絡與追蹤</h3>
+                    <p data-i18n-key="footerContactAddress">310401新竹縣竹東鎮中興路四段195號52館526室</p>
+                    <p data-i18n-key="footerContactEmail"><a href="mailto:info@susmaterial.com"
+                            style="color: var(--primary-accent);">info@susmaterial.com</a></p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p data-i18n-key="footerCopyright">&copy; 2025 SusMaterial Inc. All Rights Reserved.</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n-key="footerCopyright">© 2026 SusMaterial Inc. All Rights Reserved.</p>
         </div>
     </footer>
-    
+
     <script src="app.js"></script>
     <script>
         function reveal() {
@@ -162,7 +249,7 @@
         }
         window.addEventListener("scroll", reveal);
         reveal();
-        
+
         const navToggle = document.querySelector('.nav-toggle');
         const mainNav = document.querySelector('.main-nav');
         navToggle.addEventListener('click', () => {
@@ -170,4 +257,5 @@
         });
     </script>
 </body>
+
 </html>

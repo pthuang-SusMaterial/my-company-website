@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n-key="homePageTitleSEO">永環材料 SusMaterial | 創新綠色循環技術與低碳材料供應夥伴</title>
-    <meta name="description" data-i18n-key="homePageDescSEO" content="永環材料提供原創綠色再生技術，將廢金屬轉化為高價值資源。協助企業達成 ESG 願景與循環經濟目標。">
-    
+    <title data-i18n-key="homePageTitleSEO">高品質高純度鎢粉 (W Powder) 與氧化鎢供應商 - 永環材料 SusMaterial</title>
+    <meta name="description" data-i18n-key="homePageDescSEO"
+        content="永環材料提供純度 99.9% 以上之高品質高純度鎢粉與三氧化鎢。協助企業無痛升級綠色供應鏈，降低國際物料波動風險，您的首選低碳金屬材料供應商。">
+
     <link rel="alternate" hreflang="zh-TW" href="https://susmaterial.com/index.html" />
     <link rel="alternate" hreflang="en-US" href="https://susmaterial.com/index.html" />
     <link rel="alternate" hreflang="x-default" href="https://susmaterial.com/index.html" />
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Schema.org JSON-LD for Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "永環材料 SusMaterial",
+      "url": "https://susmaterial.com",
+      "logo": "https://susmaterial.com/assets/logo.png",
+      "description": "高品質高純度鎢粉 (Tungsten Powder) 與三氧化鎢製造供應商",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@susmaterial.com",
+        "contactType": "customer service"
+      }
+    }
+    </script>
 </head>
+
 <body>
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;">
+                <img src="assets/logo.png" alt="SusMaterial Logo">
             </a>
 
             <button class="nav-toggle" aria-label="toggle navigation">
@@ -25,14 +45,13 @@
 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
+                    <li><a href="index.html" class="active" data-i18n-key="navHome">首頁</a></li>
                     <li><a href="about.html" data-i18n-key="navAbout">關於</a></li>
-                    <li><a href="technology.html" data-i18n-key="navTech">技術</a></li>
                     <li><a href="products.html" data-i18n-key="navProducts">產品介紹</a></li>
                     <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
                     <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
                     <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                    <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                    <li><a href="contact.html" class="nav-cta-btn" data-i18n-key="navContact">聯絡我們</a></li>
                 </ul>
             </nav>
 
@@ -47,13 +66,16 @@
     <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 class="hero-title" data-i18n-key="heroTitle1">以創新綠色循環技術</h1>
-            <h1 class="hero-title" data-i18n-key="heroTitle2">定義低碳材料的未來</h1>
-            
-            <p class="hero-subtitle" data-i18n-key="heroSubtitle">永環材料 (SusMaterial) — 您最值得信賴的低碳材料供應夥伴。我們透過完全原創的再生技術，將廢棄物轉化為高價值資源，助您實現 ESG 願景與循環經濟目標。</p>
-            <div class="hero-cta">
-                <a href="technology.html" class="btn btn-primary" data-i18n-key="heroBtnPrimary">了解我們的金屬循環技術</a>
-                <a href="contact.html" class="btn btn-secondary" data-i18n-key="heroBtnSecondary">立即洽詢合作</a>
+            <h1 class="hero-title">
+                <span data-i18n-key="heroTitle1">高純度鎢粉與氧化鎢</span><br>
+                <span data-i18n-key="heroTitle2" style="font-size: 0.85em;">穩定供應的材料供應商</span>
+            </h1>
+
+            <p class="hero-subtitle" data-i18n-key="heroSubtitle">永環材料 (SusMaterial) —
+                提供高純度、具成本競爭力的鎢粉與氧化鎢。</p>
+            <div class="hero-cta mt-2">
+                <a href="products.html" class="btn btn-primary elevation-2" data-i18n-key="heroBtnPrimary">查看高純度鎢粉產品</a>
+                <a href="contact.html" class="btn btn-secondary elevation-2" data-i18n-key="heroBtnSecondary">立即洽詢合作</a>
             </div>
         </div>
     </section>
@@ -61,8 +83,14 @@
     <main>
         <section class="content-section">
             <div class="container reveal">
-                <h2 class="section-title" data-i18n-key="section1Title">源自臺灣的原創綠色科技</h2>
-                <p class="section-intro" data-i18n-key="section1Content">永環材料掌握了完全原創的綠色再生技術，從核心原理到製程細節，我們重新定義了金屬循環的標準。我們的目標不僅是處理廢棄物，更是要成為市場中領先的「低碳材料供應夥伴」。目前，我們已成功驗證將廢棄合金高效回收，並再生成為純度達 99.9% 以上的<strong>高純度再生鎢粉 (W Powder)</strong> 與<strong>三氧化鎢 (WO₃)</strong>，為半導體與精密加工供應鏈注入永續價值。</p>
+                <h2 class="section-title" data-i18n-key="section1Title">高品質金屬材料供應</h2>
+                <div class="section-intro" data-i18n-key="section1Content"
+                    style="display: flex; flex-direction: column; align-items: center;">
+                    <span style="white-space: nowrap; font-size: clamp(0.7rem, 2.5vw, 1.2rem);">永環材料供應純度達
+                        99.9% 以上的高純度高純度鎢粉 (W Powder) 與三氧化鎢 (WO₃)，</span>
+                    <span
+                        style="white-space: nowrap; font-size: clamp(0.7rem, 2.5vw, 1.2rem);">為半導體、精密加工與被動元件供應鏈提供穩定的原物料來源。</span>
+                </div>
             </div>
         </section>
 
@@ -72,49 +100,56 @@
                 <div class="features-grid">
                     <div class="feature-item">
                         <div class="feature-icon">🌿</div>
-                        <h3 data-i18n-key="feature1Title">革命性低碳製程</h3>
-                        <p data-i18n-key="feature1Desc">採用獨創的綠色專利技術，大幅降低傳統回收製程的碳排放與能源消耗，為您供應真正環保的再生材料。</p>
+                        <h3 data-i18n-key="feature1Title">合規的綠色供應鏈</h3>
+                        <p data-i18n-key="feature1Desc">我們的生產流程符合國際環保與低碳趨勢，為您供應具備 ESG 價值的循環材料，助您無縫接軌國際市場。</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">💎</div>
-                        <h3 data-i18n-key="feature2Title">高純度再生材料</h3>
-                        <p data-i18n-key="feature2Desc">我們已成功驗證從廢合金中再生高純度化學品。我們的技術平台未來更能擴展至多種稀有金屬，滿足高階市場需求。</p>
+                        <h3 data-i18n-key="feature2Title">穩定的高純度規格</h3>
+                        <p data-i18n-key="feature2Desc">能穩定批次供應 99.9% 或更高純度的鎢粉化學品，滿足高階科技產業對原物料的嚴苛要求。</p>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon">♻️</div>
-                        <h3 data-i18n-key="feature3Title">實踐循環經濟</h3>
-                        <p data-i18n-key="feature3Desc">協助您的企業實現綠色轉型，從容應對全球低碳供應鏈的挑戰與歐盟碳關稅 (CBAM) 的規範，提升品牌價值。</p>
+                        <h3 data-i18n-key="feature3Title">極具競爭力的價格</h3>
+                        <p data-i18n-key="feature3Desc">我們能顯著降低受國際礦價波動的影響，為客戶提供穩定且具成本效益的長期材料合約。</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-contact-info">
-                    <h3><img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;"></h3>
-                    <p data-i18n-key="footerContactAddress">地址: 310401新竹縣竹東鎮中興路四段195號52館526室</p>
-                    <p data-i18n-key="footerContactEmail">Email: <a href="mailto:info@susmaterial.com">info@susmaterial.com</a></p>
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 60px;">
+                    <p data-i18n-key="footerSlogan">定義低碳材料的未來，穩定供應的綠色循環夥伴。</p>
                 </div>
                 <div class="footer-links">
-                    <h3 data-i18n-key="footerSitemapTitle">網站地圖</h3>
+                    <h3 data-i18n-key="footerSitemapQuick">快速導覽</h3>
                     <ul>
-                        <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
-                        <li><a href="about.html" data-i18n-key="navAbout">關於</a></li>
-                        <li><a href="technology.html" data-i18n-key="navTech">技術</a></li>
-                        <li><a href="products.html" data-i18n-key="navProducts">產品介紹</a></li>
-                        <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
-                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
-                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                        <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                        <li><a href="about.html" data-i18n-key="navAbout">關於我們</a></li>
+                        <li><a href="products.html" data-i18n-key="navProducts">高純度鎢粉產品</a></li>
                     </ul>
                 </div>
+                <div class="footer-links">
+                    <h3 data-i18n-key="footerSitemapResources">企業資源</h3>
+                    <ul>
+                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
+                        <li><a href="services.html" data-i18n-key="navServices">ESG 代工服務</a></li>
+                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-info">
+                    <h3 data-i18n-key="footerSitemapContact">聯絡與追蹤</h3>
+                    <p data-i18n-key="footerContactAddress">310401新竹縣竹東鎮中興路四段195號52館526室</p>
+                    <p data-i18n-key="footerContactEmail"><a href="mailto:info@susmaterial.com"
+                            style="color: var(--primary-accent);">info@susmaterial.com</a></p>
+                </div>
             </div>
-            <div class="footer-bottom">
-                <p data-i18n-key="footerCopyright">© 2025 SusMaterial Inc. All Rights Reserved.</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n-key="footerCopyright">© 2026 SusMaterial Inc. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -133,7 +168,7 @@
         }
         window.addEventListener("scroll", reveal);
         reveal();
-        
+
         const navToggle = document.querySelector('.nav-toggle');
         const mainNav = document.querySelector('.main-nav');
         navToggle.addEventListener('click', () => {
@@ -147,7 +182,7 @@
         "name": "永環材料股份有限公司 (SusMaterial)",
         "url": "https://susmaterial.com/",
         "logo": "https://susmaterial.com/assets/logo.png",
-        "knowsAbout": ["鎢粉", "再生鎢粉", "三氧化鎢", "氧化鎢", "鎢鋼回收", "循環經濟", "低碳材料"],
+        "knowsAbout": ["鎢粉", "高純度鎢粉", "三氧化鎢", "氧化鎢", "鎢鋼回收", "循環經濟", "低碳材料"],
         "contactPoint": {
             "@type": "ContactPoint",
             "email": "info@susmaterial.com",
@@ -156,4 +191,5 @@
     }
     </script>
 </body>
+
 </html>

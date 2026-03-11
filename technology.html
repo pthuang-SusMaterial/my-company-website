@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我們的技術 - 永環材料 (SusMaterial)</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;">
+                <img src="assets/logo.png" alt="SusMaterial Logo">
             </a>
 
             <button class="nav-toggle" aria-label="toggle navigation">
@@ -21,12 +23,11 @@
                 <ul>
                     <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
                     <li><a href="about.html" data-i18n-key="navAbout">關於</a></li>
-                    <li><a href="technology.html" data-i18n-key="navTech">技術</a></li>
                     <li><a href="products.html" data-i18n-key="navProducts">產品介紹</a></li>
                     <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
                     <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
                     <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                    <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                    <li><a href="contact.html" class="nav-cta-btn" data-i18n-key="navContact">聯絡我們</a></li>
                 </ul>
             </nav>
 
@@ -40,90 +41,113 @@
     <main>
         <section class="page-hero">
             <div class="container">
-                <h1 class="page-title" data-i18n-key="techPageTitle">革命性的低碳再生技術</h1>
-                <p class="page-subtitle" data-i18n-key="techPageSubtitle1">傳統的金屬回收製程需要繁瑣步驟，不僅耗時、耗能，更產生大量化學廢棄物。</p>
-                <p class="page-subtitle" data-i18n-key="techPageSubtitle2">永環材料的「獨家循環技術」突破傳統製程限制。</p>
+                <h1 class="page-title" data-i18n-key="techPageTitle">高效率的低碳金屬精煉工序</h1>
+                <p class="page-subtitle" data-i18n-key="techPageSubtitle1"
+                    style="white-space: nowrap; font-size: clamp(0.7rem, 2.5vw, 1.2rem);">
+                    傳統的金屬回收製程需要繁瑣步驟，不僅耗時、耗能，更產生大量化學廢棄物。</p>
+                <p class="page-subtitle" data-i18n-key="techPageSubtitle2"
+                    style="white-space: nowrap; font-size: clamp(0.7rem, 2.5vw, 1.2rem);">
+                    永環材料具備成熟穩健的金屬處理工藝，能突破傳統製程限制，提供高品質且穩定的原物料。</p>
             </div>
         </section>
+        <!-- Interactive Process Flow -->
+        <section class="content-section">
+            <div class="container reveal">
+                <h2 class="section-title" data-i18n-key="techFlowTitle">創新製程：從廢料到高純度綠色材料</h2>
+                <div class="process-flow-container mt-2">
+                    <div class="process-step">
+                        <div class="step-icon">📦</div>
+                        <h3 data-i18n-key="techFlowStep1Title">1. 廢料進廠</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem;" data-i18n-key="techFlowStep1Desc">
+                            安全合規的回收網絡，確保廢棄靶材與工業廢料妥善分類入庫。</p>
+                    </div>
+                    <div class="process-connector">➔</div>
+                    <div class="process-step animate-pulse">
+                        <div class="step-icon">♻️</div>
+                        <h3 data-i18n-key="techFlowStep2Title">2. 低碳精煉</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem;" data-i18n-key="techFlowStep2Desc">
+                            採用低溫、低化學品用量之獨特單向化程序，大幅降低過程碳排放。</p>
+                    </div>
+                    <div class="process-connector">➔</div>
+                    <div class="process-step">
+                        <div class="step-icon">💎</div>
+                        <h3 data-i18n-key="techFlowStep3Title">3. 穩定出貨</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem;" data-i18n-key="techFlowStep3Desc">
+                            產出 99.9% 甚至更高純度之鎢粉/鎢酸酐，重新投入高端製造供應鏈。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section class="content-section">
             <div class="container reveal">
-                <h2 class="section-title" data-i18n-key="techCompareTitle">流程比較視覺化圖表</h2>
-                <div class="infographic-container">
-                        <img src="assets/technology-comparison-chart.jpg" alt="傳統回收流程 vs 永環創新技術 比較圖" class="chart-large">
-                    </div>
-            </div>
-        </section>
-
-        <section class="content-section" style="background-color: var(--bg-surface);">
-            <div class="container reveal">
-                <h2 class="section-title" data-i18n-key="techAdvantageTitle">無可比擬的製程優勢</h2>
-                <ul class="tech-points-list">
-                    <li><span class="highlight" data-i18n-key="techAdvantage1">縮短製程時間</span></li>
-                    <li><span class="highlight" data-i18n-key="techAdvantage2">降低能源消耗</span></li>
-                    <li><span class="highlight" data-i18n-key="techAdvantage3">減少化學品用量</span></li>
-                    <li><span class="highlight" data-i18n-key="techAdvantage4">降低損耗率</span></li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <div class="container reveal">
-                 <h2 class="section-title" data-i18n-key="techWhyTitle">為何選擇永環的技術？</h2>
-                 <div class="features-grid">
+                <h2 class="section-title" data-i18n-key="techWhyTitle">為何選擇永環的技術？</h2>
+                <div class="features-grid">
                     <div class="feature-item">
-                        <h3 data-i18n-key="techWhy1Title">完整掌握核心 Know-How</h3>
-                        <p data-i18n-key="techWhy1Desc">從原理到參數，我們擁有完整的專利佈局與技術保護，確保技術的獨佔性與領先性。</p>
+                        <h3 data-i18n-key="techWhy1Title">頂級純度與穩定供應</h3>
+                        <p data-i18n-key="techWhy1Desc">我們利用成熟的高效綠色製程，能穩定供應 99.9% 甚至更高純度的高純度鎢粉/三氧化鎢，幫助客戶避開國際礦產市場的劇烈價格波動。
+                        </p>
                     </div>
                     <div class="feature-item">
-                        <h3 data-i18n-key="techWhy2Title">高度商業化彈性</h3>
-                        <p data-i18n-key="techWhy2Desc">我們的設備輕量化、模組化，易於快速複製與技術轉移，非常適合進行全球技術輸出或建立分散式回收站點。</p>
+                        <h3 data-i18n-key="techWhy2Title">高度商業化與產能彈性</h3>
+                        <p data-i18n-key="techWhy2Desc">我們的生產設備具備模組化特性，易於依據客戶訂單需求快速擴充產線，確保大宗原物料合約的如期交付。</p>
                     </div>
                     <div class="feature-item">
                         <h3 data-i18n-key="techWhy3Title">卓越的減碳能力</h3>
                         <p data-i18n-key="techWhy3Desc">相較於傳統的再生製程，我們的產品大幅降低能源使用與耗材，構建永續、低碳、循環的綠色經濟。</p>
                     </div>
-                 </div>
+                </div>
             </div>
         </section>
 
         <section class="content-section" style="background-color: var(--bg-surface);">
             <div class="container reveal">
                 <h2 class="section-title" data-i18n-key="techProductTitle">高品質再生產品</h2>
-                <div class="infographic-container">
-                    <img src="assets/product-purity-chart.png" alt="永環再生氧化鎢純度分析圖" class="chart-small">
+                <div class="infographic-container md-card mt-2">
+                    <img src="assets/product-purity-chart.png" alt="再生氧化鎢純度與雜質分析圖表 - 永環材料"
+                        class="chart-small img-responsive">
                 </div>
             </div>
         </section>
+
     </main>
-    
+
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-contact-info">
-                    <h3><img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;"></h3>
-                    <p data-i18n-key="footerContactAddress">地址: 310401新竹縣竹東鎮中興路四段195號52館526室</p>
-                    <p data-i18n-key="footerContactEmail">Email: <a href="mailto:info@susmaterial.com">info@susmaterial.com</a></p>
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 60px;">
+                    <p data-i18n-key="footerSlogan">定義低碳材料的未來，穩定供應的綠色循環夥伴。</p>
                 </div>
                 <div class="footer-links">
-                    <h3 data-i18n-key="footerSitemapTitle">網站地圖</h3>
+                    <h3 data-i18n-key="footerSitemapQuick">快速導覽</h3>
                     <ul>
-                        <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
                         <li><a href="about.html" data-i18n-key="navAbout">關於我們</a></li>
-                        <li><a href="technology.html" data-i18n-key="navTech">我們的技術</a></li>
-                        <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
-                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
-                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                        <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                        <li><a href="products.html" data-i18n-key="navProducts">高純度鎢粉產品</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-i18n-key="footerCopyright">&copy; 2025 SusMaterial Inc. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <h3 data-i18n-key="footerSitemapResources">企業資源</h3>
+                    <ul>
+                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
+                        <li><a href="services.html" data-i18n-key="navServices">ESG 代工服務</a></li>
+                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-info">
+                    <h3 data-i18n-key="footerSitemapContact">聯絡與追蹤</h3>
+                    <p data-i18n-key="footerContactAddress">310401新竹縣竹東鎮中興路四段195號52館526室</p>
+                    <p data-i18n-key="footerContactEmail"><a href="mailto:info@susmaterial.com"
+                            style="color: var(--primary-accent);">info@susmaterial.com</a></p>
+                </div>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p data-i18n-key="footerCopyright">© 2026 SusMaterial Inc. All Rights Reserved.</p>
+        </div>
     </footer>
-    
+
     <script src="app.js"></script>
     <script>
         function reveal() {
@@ -139,7 +163,7 @@
         }
         window.addEventListener("scroll", reveal);
         reveal();
-        
+
         const navToggle = document.querySelector('.nav-toggle');
         const mainNav = document.querySelector('.main-nav');
         navToggle.addEventListener('click', () => {
@@ -147,4 +171,5 @@
         });
     </script>
 </body>
+
 </html>

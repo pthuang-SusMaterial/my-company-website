@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>製程研發實習生 - 人才招募 | 永環材料 (SusMaterial)</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;">
+                <img src="assets/logo.png" alt="SusMaterial Logo">
             </a>
             <button class="nav-toggle" aria-label="toggle navigation">
                 <span class="hamburger"></span>
@@ -19,11 +21,10 @@
                 <ul>
                     <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
                     <li><a href="about.html" data-i18n-key="navAbout">關於</a></li>
-                    <li><a href="technology.html" data-i18n-key="navTech">技術</a></li>
                     <li><a href="products.html" data-i18n-key="navProducts">產品介紹</a></li>
                     <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
                     <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
-                    <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
+                    <li><a href="careers.html" class="active" data-i18n-key="navCareers">人才招募</a></li>
                     <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
                 </ul>
             </nav>
@@ -47,10 +48,12 @@
 
         <section class="content-section">
             <div class="container">
-                <div class="job-detail-grid">
-                    <div class="job-detail-main">
+                <div class="job-detail-grid" style="gap: 2rem;">
+                    <div class="job-detail-main md-card elevation-1" style="padding: 3rem;">
                         <h2 data-i18n-key="jobDesc">工作說明</h2>
-                        <p data-i18n-key="jobInternAbout">這不僅是一份實習，這是一個讓您深入參與綠色科技新創公司核心研發的機會。您將與我們的創辦人及研發團隊密切合作，將課堂所學應用於真實世界的永續發展挑戰。如果您對材料科學充滿熱情，並渴望在職涯早期就創造影響力，這裡就是您的舞台。</p>
+                        <p data-i18n-key="jobInternAbout">
+                            這不僅是一份實習，這是一個讓您深入參與綠色科技新創公司核心研發的機會。您將與我們的創辦人及研發團隊密切合作，將課堂所學應用於真實世界的永續發展挑戰。如果您對材料科學充滿熱情，並渴望在職涯早期就創造影響力，這裡就是您的舞台。
+                        </p>
 
                         <h3 data-i18n-key="jobResp">主要職責</h3>
                         <ul>
@@ -75,16 +78,22 @@
                         </ul>
                     </div>
 
-                    <div class="job-detail-sidebar">
-                        <div class="sidebar-widget">
+                    <div class="job-detail-sidebar" style="position: sticky; top: 100px; align-self: start;">
+                        <div class="sidebar-widget md-card elevation-2"
+                            style="padding: 2rem; border-top: 4px solid var(--primary-accent);">
                             <h4 data-i18n-key="jobAbout">關於這份工作</h4>
                             <ul>
-                                <li><strong data-i18n-key="jobType">工作類型：</strong> <span data-i18n-key="jobInternType">實習</span></li>
-                                <li><strong data-i18n-key="jobLoc">工作地點：</strong> <span data-i18n-key="jobInternLoc">新竹縣竹東鎮工研院中興院區</span></li>
-                                <li><strong data-i18n-key="jobPay">薪資待遇：</strong> <span data-i18n-key="jobInternPay">依經驗調整</span></li>
+                                <li><strong data-i18n-key="jobType">工作類型：</strong> <span
+                                        data-i18n-key="jobInternType">實習</span></li>
+                                <li><strong data-i18n-key="jobLoc">工作地點：</strong> <span
+                                        data-i18n-key="jobInternLoc">新竹縣竹東鎮工研院中興院區</span></li>
+                                <li><strong data-i18n-key="jobPay">薪資待遇：</strong> <span
+                                        data-i18n-key="jobInternPay">依經驗調整</span></li>
                             </ul>
                             <p style="margin-top: 1rem;" data-i18n-key="jobApplyDesc">準備好加入我們了嗎？請將您的履歷寄至：</p>
-                            <a href="mailto:info@susmaterial.com" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 0.5rem;" data-i18n-key="jobApply">立即申請</a>
+                            <a href="mailto:info@susmaterial.com" class="btn btn-primary"
+                                style="width: 100%; text-align: center; margin-top: 0.5rem;"
+                                data-i18n-key="jobApply">立即申請</a>
                         </div>
                     </div>
                 </div>
@@ -95,27 +104,35 @@
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-contact-info">
-                    <h3><img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;"></h3>
-                    <p data-i18n-key="footerContactAddress">地址: 310401新竹縣竹東鎮中興路四段195號52館526室</p>
-                    <p data-i18n-key="footerContactEmail">Email: <a href="mailto:info@susmaterial.com">info@susmaterial.com</a></p>
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 60px;">
+                    <p data-i18n-key="footerSlogan">定義低碳材料的未來，穩定供應的綠色循環夥伴。</p>
                 </div>
                 <div class="footer-links">
-                    <h3 data-i18n-key="footerSitemapTitle">網站地圖</h3>
+                    <h3 data-i18n-key="footerSitemapQuick">快速導覽</h3>
                     <ul>
-                        <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
                         <li><a href="about.html" data-i18n-key="navAbout">關於我們</a></li>
-                        <li><a href="technology.html" data-i18n-key="navTech">我們的技術</a></li>
-                        <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
-                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
-                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                        <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                        <li><a href="products.html" data-i18n-key="navProducts">高純度鎢粉產品</a></li>
                     </ul>
                 </div>
+                <div class="footer-links">
+                    <h3 data-i18n-key="footerSitemapResources">企業資源</h3>
+                    <ul>
+                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
+                        <li><a href="services.html" data-i18n-key="navServices">ESG 代工服務</a></li>
+                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-info">
+                    <h3 data-i18n-key="footerSitemapContact">聯絡與追蹤</h3>
+                    <p data-i18n-key="footerContactAddress">310401新竹縣竹東鎮中興路四段195號52館526室</p>
+                    <p data-i18n-key="footerContactEmail"><a href="mailto:info@susmaterial.com"
+                            style="color: var(--primary-accent);">info@susmaterial.com</a></p>
+                </div>
             </div>
-            <div class="footer-bottom">
-                <p data-i18n-key="footerCopyright">© 2025 SusMaterial Inc. All Rights Reserved.</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n-key="footerCopyright">© 2026 SusMaterial Inc. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -134,7 +151,7 @@
         }
         window.addEventListener("scroll", reveal);
         reveal();
-        
+
         const navToggle = document.querySelector('.nav-toggle');
         const mainNav = document.querySelector('.main-nav');
         navToggle.addEventListener('click', () => {
@@ -142,4 +159,5 @@
         });
     </script>
 </body>
+
 </html>

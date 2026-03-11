@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>聯絡我們 - 永環材料 (SusMaterial)</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 80px;">
+                <img src="assets/logo.png" alt="SusMaterial Logo">
             </a>
 
             <button class="nav-toggle" aria-label="toggle navigation">
@@ -21,12 +23,11 @@
                 <ul>
                     <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
                     <li><a href="about.html" data-i18n-key="navAbout">關於</a></li>
-                    <li><a href="technology.html" data-i18n-key="navTech">技術</a></li>
                     <li><a href="products.html" data-i18n-key="navProducts">產品介紹</a></li>
                     <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
                     <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
                     <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
-                    <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                    <li><a href="contact.html" class="active nav-cta-btn" data-i18n-key="navContact">聯絡我們</a></li>
                 </ul>
             </nav>
 
@@ -39,10 +40,11 @@
 
     <main>
         <section class="page-hero">
-           <div class="container">
-             <h1 class="page-title" data-i18n-key="contactPageTitle">與我們聯繫</h1>
-             <p class="page-subtitle" data-i18n-key="contactPageSubtitle">感謝您對永環材料的關注...</p>
-           </div>
+            <div class="container">
+                <h1 class="page-title" data-i18n-key="contactPageTitle">與我們聯繫</h1>
+                <p class="page-subtitle" data-i18n-key="contactPageSubtitle">
+                    無論是探討技術導入、材料採購，或是探索綠色供應鏈的合作契機，我們的專家團隊隨時準備好為您提供專屬的永續解決方案。</p>
+            </div>
         </section>
 
         <section class="content-section">
@@ -50,45 +52,60 @@
                 <div class="contact-grid">
                     <div class="contact-form">
                         <h3>線上諮詢表單</h3>
-                        <p style="color:var(--text-secondary); margin-bottom: 2rem;">請填寫以下表單，我們的專家團隊將在 1-2 個工作日內盡快與您聯繫。</p>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezeEbLsRZ07hnGW4J0bH8TXHt20SnYXJY_5I69_8pW52dEfQ/viewform?embedded=true" width="640" height="1211" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        <p style="color:var(--text-secondary); margin-bottom: 2rem;">請填寫以下表單，我們的專家團隊將在 1-2 個工作日內盡快與您聯繫。
+                        </p>
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSezeEbLsRZ07hnGW4J0bH8TXHt20SnYXJY_5I69_8pW52dEfQ/viewform?embedded=true"
+                            width="640" height="1211" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                     </div>
                     <div class="contact-info">
                         <div class="map-container">
-                             <p style="padding: 2rem; text-align: center;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.6214703471446!2d121.04298217393165!3d24.774164448707914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346837daafec8cf5%3A0x65d8d4def2d4ca99!2z5bel56CU6ZmiNTLppKg!5e0!3m2!1sen!2stw!4v1753025527531!5m2!1sen!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                            <p style="padding: 2rem; text-align: center;"><iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.6214703471446!2d121.04298217393165!3d24.774164448707914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346837daafec8cf5%3A0x65d8d4def2d4ca99!2z5bel56CU6ZmiNTLppKg!5e0!3m2!1sen!2stw!4v1753025527531!5m2!1sen!2stw"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe></p>
                         </div>
-                        </div>
-</div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    
+
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-contact-info">
-                     <h3 data-i18n-key="footerContactTitle">永環材料股份有限公司 (SusMaterial)</h3>
-                     <p data-i18n-key="footerContactAddress">地址: 310401新竹縣竹東鎮中興路四段195號52館526室</p>
-                     <p>Email: <a href="mailto:info@susmaterial.com">info@susmaterial.com</a></p>
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="SusMaterial Logo" style="height: 60px;">
+                    <p data-i18n-key="footerSlogan">定義低碳材料的未來，穩定供應的綠色循環夥伴。</p>
                 </div>
                 <div class="footer-links">
-                    <h3>網站地圖</h3>
+                    <h3 data-i18n-key="footerSitemapQuick">快速導覽</h3>
                     <ul>
-                        <li><a href="index.html" data-i18n-key="navHome">首頁</a></li>
                         <li><a href="about.html" data-i18n-key="navAbout">關於我們</a></li>
-                        <li><a href="technology.html" data-i18n-key="navTech">我們的技術</a></li>
-                        <li><a href="services.html" data-i18n-key="navServices">服務項目</a></li>
-                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
-                        <li><a href="contact.html" data-i18n-key="navContact">聯絡我們</a></li>
+                        <li><a href="products.html" data-i18n-key="navProducts">高純度鎢粉產品</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 SusMaterial Inc. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <h3 data-i18n-key="footerSitemapResources">企業資源</h3>
+                    <ul>
+                        <li><a href="market.html" data-i18n-key="navMarket">市場與應用</a></li>
+                        <li><a href="services.html" data-i18n-key="navServices">ESG 代工服務</a></li>
+                        <li><a href="careers.html" data-i18n-key="navCareers">人才招募</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-info">
+                    <h3 data-i18n-key="footerSitemapContact">聯絡與追蹤</h3>
+                    <p data-i18n-key="footerContactAddress">310401新竹縣竹東鎮中興路四段195號52館526室</p>
+                    <p data-i18n-key="footerContactEmail"><a href="mailto:info@susmaterial.com"
+                            style="color: var(--primary-accent);">info@susmaterial.com</a></p>
+                </div>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p data-i18n-key="footerCopyright">© 2026 SusMaterial Inc. All Rights Reserved.</p>
+        </div>
     </footer>
-    
+
     <script src="app.js"></script>
 
     <script>
@@ -115,4 +132,5 @@
         });
     </script>
 </body>
+
 </html>

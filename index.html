@@ -9,9 +9,10 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'AW-17989159343');
 
-      // 事件追蹤函式：當使用者點擊「聯絡我們」按鈕時觸發
+      // 針對「索取報價」按鈕點擊的追蹤函式
       function gtag_report_conversion(url) {
         var callback = function () {
           if (typeof(url) != 'undefined') {
@@ -19,7 +20,7 @@
           }
         };
         gtag('event', 'conversion', {
-            'send_to': 'AW-17989159343', // 請確認後台生成的轉換 ID
+            'send_to': 'AW-17989159343/R4etCIj71Y0cEK-T84FD',
             'event_callback': callback
         });
         return false;
@@ -28,26 +29,7 @@
 
     <title data-i18n-key="homePageTitleSEO">高品質高純度鎢粉 (W Powder) 與氧化鎢供應商 - 永環材料 SusMaterial</title>
     <meta content="永環材料提供純度 99.9% 以上之高品質高純度鎢粉與三氧化鎢。協助企業無痛升級綠色供應鏈，降低國際物料波動風險，您的首選低碳金屬材料供應商。" data-i18n-key="homePageDescSEO" name="description"/>
-    <link href="https://susmaterial.com/index.html" hreflang="zh-TW" rel="alternate"/>
-    <link href="https://susmaterial.com/index.html" hreflang="en-US" rel="alternate"/>
-    <link href="https://susmaterial.com/index.html" hreflang="x-default" rel="alternate"/>
     <link href="style.css" rel="stylesheet"/>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "永環材料 SusMaterial",
-      "url": "https://susmaterial.com",
-      "logo": "https://susmaterial.com/assets/logo.png",
-      "description": "高品質高純度鎢粉 (Tungsten Powder) 與三氧化鎢製造供應商",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "info@susmaterial.com",
-        "contactType": "customer service"
-      }
-    }
-    </script>
 </head>
 <body>
     <header class="main-header">
@@ -55,79 +37,27 @@
             <a class="logo" href="index.html">
                 <img alt="SusMaterial Logo" src="assets/logo.png"/>
             </a>
-            <button aria-label="toggle navigation" class="nav-toggle">
-                <span class="hamburger"></span>
-            </button>
             <nav class="main-nav">
                 <ul>
-                    <li><a class="active" data-i18n="navHome" data-i18n-key="navHome" href="index.html">首頁</a></li>
-                    <li><a data-i18n="navAbout" data-i18n-key="navAbout" href="about.html">關於</a></li>
-                    <li><a data-i18n="navProducts" data-i18n-key="navProducts" href="products.html">產品介紹</a></li>
-                    <li><a data-i18n="navServices" data-i18n-key="navServices" href="services.html">服務項目</a></li>
-                    <li><a data-i18n="navMarket" data-i18n-key="navMarket" href="market.html">市場與應用</a></li>
-                    <li><a data-i18n="navCareers" data-i18n-key="navCareers" href="careers.html">人才招募</a></li>
-                    <li><a class="nav-cta-btn" data-i18n="navContact" data-i18n-key="navContact" href="contact.html" onclick="return gtag_report_conversion('contact.html');">聯絡我們</a></li>
+                    <li><a class="active" href="index.html">首頁</a></li>
+                    <li><a href="products.html">產品介紹</a></li>
+                    <li><a class="nav-cta-btn" href="contact.html" onclick="return gtag_report_conversion('contact.html');">聯絡我們</a></li>
                 </ul>
             </nav>
-            <div class="language-switcher">
-                <button class="lang-btn active" data-i18n="langZHTW" data-lang="zh-TW">繁中</button>
-                <button class="lang-btn" data-i18n="langEN" data-lang="en-US">EN</button>
-            </div>
         </div>
     </header>
 
     <section class="hero-section">
-        <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 class="hero-title">
-                <span data-i18n="index_1290" data-i18n-key="heroTitle1">高純度鎢粉與氧化鎢</span><br/>
-                <span data-i18n="index_0291" data-i18n-key="heroTitle2" style="font-size: 0.85em;">穩定供應的材料供應商</span>
-            </h1>
-            <p class="hero-subtitle" data-i18n="index_0549" data-i18n-key="heroSubtitle">永環材料 (SusMaterial) — 提供高純度、具成本競爭力的鎢粉與氧化鎢。</p>
+            <h1 class="hero-title">高純度鎢粉與氧化鎢</h1>
+            <p class="hero-subtitle">永環材料 (SusMaterial) — 提供高純度、具成本競爭力的鎢粉與氧化鎢。</p>
             <div class="hero-cta mt-2">
-                <a class="btn btn-primary elevation-2" data-i18n="index_5104" data-i18n-key="heroBtnPrimary" href="products.html">查看高純度鎢粉產品</a>
-                <a class="btn btn-secondary elevation-2" data-i18n="index_7829" data-i18n-key="heroBtnSecondary" href="contact.html" onclick="return gtag_report_conversion('contact.html');">立即洽詢合作</a>
+                <a class="btn btn-primary elevation-2" href="products.html">查看高純度鎢粉產品</a>
+                <a class="btn btn-secondary elevation-2" href="contact.html" onclick="return gtag_report_conversion('contact.html');">立即洽詢合作</a>
             </div>
         </div>
     </section>
 
-    <main>
-        <section class="content-section">
-            <div class="container reveal">
-                <h2 class="section-title" data-i18n="index_7251" data-i18n-key="section1Title">高品質金屬材料供應</h2>
-                <div class="section-intro" data-i18n-key="section1Content" style="display: flex; flex-direction: column; align-items: center;">
-                    <span data-i18n="index_0140" style="white-space: nowrap; font-size: clamp(0.7rem, 2.5vw, 1.2rem);">永環材料供應純度達 99.9% 以上的高純度高純度鎢粉 (W Powder) 與三氧化鎢 (WO₃)，</span>
-                    <span data-i18n="index_1662" style="white-space: nowrap; font-size: clamp(0.7rem, 2.5vw, 1.2rem);">為半導體、精密加工與被動元件供應鏈提供穩定的原物料來源。</span>
-                </div>
-            </div>
-        </section>
-        </main>
-
-    <footer class="main-footer">
-        </footer>
-
     <script src="app.js"></script>
-    <script>
-        // ... 原有的滾動動畫與導覽腳本 ...
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal();
-
-        const navToggle = document.querySelector('.nav-toggle');
-        const mainNav = document.querySelector('.main-nav');
-        navToggle.addEventListener('click', () => {
-            document.body.classList.toggle('nav-open');
-        });
-    </script>
 </body>
 </html>
